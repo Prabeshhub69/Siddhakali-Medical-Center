@@ -16,8 +16,6 @@ html {
 
 body {
   background-color: #ffffff;
-  display: flex;
-  display: -webkit-flex;
   -webkit-justify-content: center;
   -webkit-align-items: center;
   justify-content: center;
@@ -36,25 +34,25 @@ body {
 
 .card--1 .card__img,
 .card--1 .card__img--hover {
-  background-image: url('./images/Bacteriogolical_Incubator.webp');
+  background-image: url('/images/Bacteriogolical_Incubator.webp');
   background-size: contain;
 }
 
 .card--2 .card__img,
 .card--2 .card__img--hover {
-  background-image: url('./images/Chemistry_Analyzer.webp');
+  background-image: url('/images/Chemistry_Analyzer.webp');
   background-size: contain;
 }
 
 .card--3 .card__img,
 .card--3 .card__img--hover {
-  background-image: url('./images/CLIA.webp');
+  background-image: url('/images/CLIA.webp');
   background-size: contain;
 }
 
 .card--4 .card__img,
 .card--4 .card__img--hover {
-  background-image: url('./images/HPLC.webp');
+  background-image: url('/images/HPLC.webp');
   background-size: contain;
 }
 
