@@ -1,5 +1,5 @@
 // List of allowed pages (to avoid loading wrong files)
-const routes = ["home", "about", "timeline", "contact"];
+const routes = ["home", "about", "timeline", "services", "contact"];
 
 // Load CSS dynamically
 function loadCSS(page) {
