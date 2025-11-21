@@ -1,47 +1,11 @@
 // List of allowed pages (to avoid loading wrong files)
-const routes = ["home", "about", "services", "contact"];
-
-// Load a specific page into #app
-function loadPage(page) {
-    fetch(`html/${page}.html`)
-        .then(response => response.text())
-        .then(html => {
-            document.getElementById("app").innerHTML = html;
-        })
-        .catch(() => {
-            document.getElementById("app").innerHTML = "<h2>Page not found</h2>";
-        });
-}
-
-// Route handler
-function router() {
-    let hash = location.hash.replace("#", "");
-
-    if (!hash) {
-        hash = "home"; // default page
-    }
-
-    // If route not in allowed list, redirect to home
-    if (!routes.includes(hash)) {
-        hash = "home";
-    }
-
-    loadPage(hash);
-}
-
-// Trigger when user changes URL hash
-window.addEventListener("hashchange", router);
-
-// Trigger on page load
-window.addEventListener("load", router);
+const routes = ["home", "about", "timeline", "contact"];
 
 // Load CSS dynamically
 function loadCSS(page) {
-    // remove old page CSS
     const oldLink = document.getElementById("page-css");
     if (oldLink) oldLink.remove();
 
-    // create new link
     const link = document.createElement("link");
     link.rel = "stylesheet";
     link.href = `/css/${page}.css`;
@@ -49,19 +13,45 @@ function loadCSS(page) {
     document.head.appendChild(link);
 }
 
-// Updated loadPage function
+// Load JS dynamically
+function loadJS(page) {
+    const oldScript = document.getElementById("page-js");
+    if (oldScript) oldScript.remove();
+
+    const script = document.createElement("script");
+    script.src = `/js/${page}.js`;
+    script.id = "page-js";
+    document.body.appendChild(script);
+}
+
+// Load a specific page into #app
 function loadPage(page) {
-    // load CSS for this page
+    // Load CSS
     loadCSS(page);
 
-    // fetch HTML
+    // Fetch HTML
     fetch(`html/${page}.html`)
         .then(response => response.text())
         .then(html => {
             document.getElementById("app").innerHTML = html;
+
+            // Load JS after HTML is inserted
+            loadJS(page);
         })
         .catch(() => {
             document.getElementById("app").innerHTML = "<h2>Page not found</h2>";
         });
 }
 
+// Router function
+function router() {
+    let hash = location.hash.replace("#", "");
+    if (!hash) hash = "home"; // default page
+    if (!routes.includes(hash)) hash = "home";
+
+    loadPage(hash);
+}
+
+// Trigger router on hash change or page load
+window.addEventListener("hashchange", router);
+window.addEventListener("load", router);

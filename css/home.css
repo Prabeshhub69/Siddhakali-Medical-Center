@@ -22,7 +22,7 @@ body {
   align-items: center;
 }
 
-.cards {
+.machines {
   width: 100%;
   display: flex;
   display: -webkit-flex;
@@ -32,31 +32,31 @@ body {
   max-width: 1320px;
 }
 
-.card--1 .card__img,
-.card--1 .card__img--hover {
+.machine--1 .machine__img,
+.machine--1 .machine__img--hover {
   background-image: url('/images/Bacteriogolical_Incubator.webp');
   background-size: contain;
 }
 
-.card--2 .card__img,
-.card--2 .card__img--hover {
+.machine--2 .machine__img,
+.machine--2 .machine__img--hover {
   background-image: url('/images/Chemistry_Analyzer.webp');
   background-size: contain;
 }
 
-.card--3 .card__img,
-.card--3 .card__img--hover {
+.machine--3 .machine__img,
+.machine--3 .machine__img--hover {
   background-image: url('/images/CLIA.webp');
   background-size: contain;
 }
 
-.card--4 .card__img,
-.card--4 .card__img--hover {
+.machine--4 .machine__img,
+.machine--4 .machine__img--hover {
   background-image: url('/images/HPLC.webp');
   background-size: contain;
 }
 
-.card__img {
+.machine__img {
   visibility: hidden;
   background-size: cover;
   background-position: center;
@@ -68,7 +68,7 @@ body {
 
 }
 
-.card__info-hover {
+.machine__info-hover {
   position: absolute;
   padding: 16px;
   width: 100%;
@@ -76,7 +76,7 @@ body {
   top: 0;
 }
 
-.card__img--hover {
+.machine__img--hover {
   transition: 0.2s all ease-out;
   background-size: cover;
   background-position: center;
@@ -90,7 +90,7 @@ body {
 
 }
 
-.card {
+.machine {
   margin-right: 25px;
   transition: all .4s cubic-bezier(0.175, 0.885, 0, 1);
   background-color: #fff;
@@ -101,12 +101,12 @@ body {
   box-shadow: 3px 7px 12px 2px rgba(0, 0, 0, 0.1);
 }
 
-.card:hover {
+.machine:hover {
   box-shadow: 0px 30px 18px -8px rgba(0, 0, 0, 0.1);
   transform: scale(1.10, 1.10);
 }
 
-.card__info {
+.machine__info {
   z-index: 2;
   background-color: #fff;
   border-bottom-left-radius: 12px;
@@ -114,44 +114,37 @@ body {
   padding: 16px 24px 24px 24px;
 }
 
-.card__category {
-  font-family: 'Raleway', sans-serif;
-  text-transform: uppercase;
-  font-size: 13px;
-  letter-spacing: 2px;
-  font-weight: 500;
-  color: #868686;
-}
-
-.card__title {
+.machine__title {
+  font-size: 1.2em;
+  font-weight: bold;
   margin-top: 5px;
   margin-bottom: 10px;
   font-family: 'Roboto Slab', serif;
 }
 
-.card__by {
+.machine__by {
   font-size: 12px;
   font-family: 'Raleway', sans-serif;
   font-weight: 500;
 }
 
-.card__author {
+.machine__author {
   font-weight: 600;
   text-decoration: none;
   color: #AD7D52;
 }
 
-.card:hover .card__img--hover {
+.machine:hover .machine__img--hover {
   height: 100%;
   opacity: 0.3;
 }
 
-.card:hover .card__info {
+.machine:hover .machine__info {
   background-color: transparent;
   position: relative;
 }
 
-.card:hover .card__info-hover {
+.machine:hover .machine__info-hover {
   opacity: 1;
 }
 
