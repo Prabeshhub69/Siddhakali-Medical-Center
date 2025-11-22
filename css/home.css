@@ -44,7 +44,6 @@ html {
   flex-direction: column;
   justify-content: center;
   gap: 20px;
-  background-color: white;
 }
 
 .hero-text h1{
@@ -53,8 +52,8 @@ html {
 }
 
 .hero-text .paragraph1{
-  font-size: 1.2em;
-  color: grey;
+  font-size: 1em;
+  color: black;
 }
 
 .hero-text .hero-buttons {
@@ -80,10 +79,61 @@ html {
   transform: scale(1.05);
 }
 
+.hero-text .button-appointment {
+  width: 230px;
+  height: 50px;
+  background-color: #2563EB;
+  color: white;
+  border: none;
+  border-radius: 50px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.hero-text .button-appointment:hover {
+  background-color: #1E40AF;
+  transform: scale(1.05);
+}
+
+.hero-text .button-appointment i{
+  margin-left: 8px;
+}
+
+.hero-text .button-appointment:hover i {
+  margin-left: 20px;
+  transition: margin-left 0.3s ease;
+}
+
+.phrases {
+  display: flex;
+  gap: 100px;
+}
+
+.phrases .catchy {
+  display: flex;
+  flex-direction: column;
+}
+
+.phrases .years {
+  font-size: 2em;
+  font-weight: bold;
+  margin: 0;
+  color:#1E40AF;
+}
+
+.phrases .experience {
+  font-size: .9em;
+  color: #30598e;
+  margin: 0;
+}
+
+/*--------Hero Image CSS------------------*/
 .hero-image{
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: white;
 }
 
 .hero-image img{
@@ -91,7 +141,7 @@ html {
   height: 70%;
   border-radius: 12px;
 }
-
+/*--------END------------------Hero Image CSS-------------------------------------*/
 
 
 
