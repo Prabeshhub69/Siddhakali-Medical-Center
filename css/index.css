@@ -32,14 +32,17 @@ h1 {
 
 .navbar {
     background-color: white;
-    border: 1px solid black;
     padding: .5em 1em .5em 1em;
     width: 60%;
-    border-radius: 20px;
+    border-radius: 50px;
     color: white;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    box-shadow: 
+        4px 0 4px rgba(183, 183, 183, 0), 
+        -4px 0 4px rgba(183, 183, 183, 0), 
+        0 5px 4px rgba(183, 183, 183, 0.4);
 }
 
 .navbar .nav {
@@ -50,8 +53,8 @@ h1 {
 
 .navbar .nav a {
     text-decoration: none;
-    color: grey;
-    font-size: 1.1rem;
+    color: black;
+    font-size: 1rem;
 }
 
 .nav a:hover {
@@ -60,8 +63,8 @@ h1 {
 
 .navbar .contact {
     padding: .4em 1.3em .3em 1.4em;
-    background-color:black;
-    border-radius: 1em;
+    background-color:#2563EB;
+    border-radius: 18px;
 }
 
 .navbar .contact:hover {
