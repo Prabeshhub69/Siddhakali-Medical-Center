@@ -24,6 +24,14 @@ html {
   width: fit-content;
   margin-bottom: 0 !important;
   border-radius: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap:10px;
+}
+
+.hero-section .heart {
+  color: #147b59;
 }
 
 .hero-text .heart p {
@@ -49,6 +57,11 @@ html {
   color: grey;
 }
 
+.hero-text .hero-buttons {
+  display: flex;
+  gap: 20px;
+}
+
 .hero-text .button-contact{
   width: 150px;
   height: 50px;
@@ -57,14 +70,14 @@ html {
   border: 2px solid #2563EB;
   border-radius: 50px;
   font-size: 1.1rem;
-  /* font-weight: 600; */
   cursor: pointer;
+  transition: transform 0.3s ease;
 }
 
 .hero-text .button-contact:hover{
   background-color: #EFF6FF;
   color: #2155c6;
-  transition: 0.3s;
+  transform: scale(1.05);
 }
 
 .hero-image{
