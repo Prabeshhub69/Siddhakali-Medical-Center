@@ -16,6 +16,15 @@ html {
 .hero-section { 
   background-image: url('/images/backgroundhero.jpg');
   background-size: cover;
+  height: 650px;
+}
+
+.row {
+  height: 100%;
+}
+
+.container {
+  height: 100%;
 }
 
 .hero-text .heart {
@@ -135,12 +144,11 @@ html {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: white;
 }
 
 .hero-image img{
   width: 80%;
-  height: 70%;
+  height: 90%;
   border-radius: 12px;
 }
 
