@@ -13,6 +13,89 @@ html {
   padding: 0;
 }
 
+
+.hero-section {
+background-image: 
+
+    /* grid lines (on top) */
+    linear-gradient(to right, rgb(246, 245, 245) 1px, transparent 1px),
+    linear-gradient(to bottom, rgb(246, 245, 245) 1px, transparent 1px),
+
+    /* blue gradient (at the back) */
+    linear-gradient(to bottom, #F3F8FF, #F7FAFF);
+
+background-size: 
+    100px 100px,  /* vertical grid */
+    100px 100px,  /* horizontal grid */
+    100% 100%;    /* gradient covers full area */
+
+}
+
+.hero-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+}
+
+.hero-text h1{
+  font-size: 3.2em;
+  font-weight: bold;
+}
+
+.hero-text p{
+  font-size: 1.2em;
+  color: grey;
+}
+
+.hero-text .button-contact{
+  width: 150px;
+  height: 50px;
+  background-color: white;
+  color: #2155c6;
+  border: 2px solid #2563EB;
+  border-radius: 50px;
+  font-size: 1.1rem;
+  /* font-weight: 600; */
+  cursor: pointer;
+}
+
+.hero-text .button-contact:hover{
+  background-color: #EFF6FF;
+  color: #2155c6;
+  transition: 0.3s;
+}
+
+.hero-image{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-image img{
+  width: 80%;
+  height: 80%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*--------START------------------Machine Card CSS-------------------------------------*/
 body {
   background-color: #ffffff;
   -webkit-justify-content: center;
@@ -145,5 +228,5 @@ body {
 .machine:hover .machine__info-hover {
   opacity: 1;
 }
-
+/*-------------END--------------------Machine Card CSS-----------------------------------*/
 
