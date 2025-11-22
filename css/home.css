@@ -53,7 +53,7 @@ html {
 
 .hero-text .paragraph1{
   font-size: 1em;
-  color: black;
+  color: rgb(85, 85, 85);
 }
 
 .hero-text .hero-buttons {
@@ -113,6 +113,7 @@ html {
 .phrases .catchy {
   display: flex;
   flex-direction: column;
+  /* align-items: center; */
 }
 
 .phrases .years {
@@ -130,6 +131,7 @@ html {
 
 /*--------Hero Image CSS------------------*/
 .hero-image{
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -141,6 +143,9 @@ html {
   height: 70%;
   border-radius: 12px;
 }
+
+
+
 /*--------END------------------Hero Image CSS-------------------------------------*/
 
 
