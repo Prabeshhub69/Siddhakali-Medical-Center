@@ -55,6 +55,21 @@ function router() {
     if (!routes.includes(hash)) hash = "home";
 
     loadPage(hash);
+    highlightActiveLink(hash);
+}
+
+function highlightActiveLink(page) {
+    const links = document.querySelectorAll(".nav a");
+
+    links.forEach(link => {
+        const href = link.getAttribute("href").replace("#", "");
+
+        if (href === page) {
+            link.classList.add("active");
+        } else {
+            link.classList.remove("active");
+        }
+    });
 }
 
 // Trigger router on hash change or page load

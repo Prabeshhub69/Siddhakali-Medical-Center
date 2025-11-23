@@ -14,11 +14,13 @@ html {
 }
 
 .hero-section {
-  position: relative;          /* needed for pseudo-element positioning */
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: end;
   height: 750px;
-  overflow: hidden;            /* ensures blur doesn’t overflow */
+  overflow: hidden;
   box-shadow: inset 0 0 20px rgb(0, 0, 0, 1);
-
 }
 
 .hero-section::before {
@@ -29,25 +31,22 @@ html {
   width: 100%;
   height: 100%;
   background-image: url('/images/bg_herosection.png');
-  background-size:cover;
+  background-size: cover;
   background-position: bottom;
-  filter: blur(3px);           /* adjust the blur */
-  z-index: -1;                 /* behind the content */
-  
-}
-
-.row {
-  height: 100%;
+  filter: blur(0px);
+  z-index: -1;
 }
 
 .hero-text {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  gap: 20px;
+  text-align: left;
+  /* width: 100%; */
+  background: rgba(0, 0, 0, 0.05); 
+  border-radius: 20px;
 }
 
-.hero-text .heart {
+.hero-section .heart {
+  position: relative;
+  margin-bottom: 20px;
   background-color: #E5FCF7;
   padding: .5em;
   width: fit-content;
@@ -56,35 +55,59 @@ html {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap:10px;
+  gap: 10px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.hero-section .heart:hover {
+  transform: scale(1.05);
+  cursor: default;
 }
 
 .hero-section .heart {
   color: #147b59;
 }
 
-.hero-text .heart p {
+.hero-section .heart p {
   margin: 0;
   color: #147b59;
 }
 
-.hero-text h1{
-  font-size: 3.2em;
-  font-weight: bold;
-  color: black;
+.main-texts {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
 }
 
-.hero-text .paragraph1{
-  font-size: 1em;
+.hero-text h1 {
+  font-size: 3.8em;
+  font-weight: bold;
   color: white;
+}
+
+.medical-word {
+  color: black;
+  /* blue */
+  text-decoration: underline;
+}
+
+.hero-text .paragraph1 {
+  font-size: 1em;
+  width: 60%;
+  color: white;
+  text-align: left;
 }
 
 .hero-text .hero-buttons {
   display: flex;
+  justify-content: center;
+  padding: 20px;
   gap: 20px;
 }
 
-.hero-text .button-contact{
+.hero-text .button-contact {
   width: 150px;
   height: 50px;
   background-color: white;
@@ -96,7 +119,7 @@ html {
   transition: transform 0.3s ease;
 }
 
-.hero-text .button-contact:hover{
+.hero-text .button-contact:hover {
   background-color: #EFF6FF;
   color: #2155c6;
   transform: scale(1.05);
@@ -119,7 +142,7 @@ html {
   transform: scale(1.05);
 }
 
-.hero-text .button-appointment i{
+.hero-text .button-appointment i {
   margin-left: 8px;
 }
 
@@ -131,6 +154,7 @@ html {
 .phrases {
   display: flex;
   gap: 100px;
+  justify-content: center;
 }
 
 .phrases .catchy {
@@ -143,67 +167,16 @@ html {
   font-size: 2em;
   font-weight: bold;
   margin: 0;
-  color:#1E40AF;
+  color: gold;
 }
 
 .phrases .experience {
   font-size: .9em;
-  color: #30598e;
+  color: white;
   margin: 0;
 }
 
-/*--------Hero Image CSS------------------*/
-.hero-image{
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.hero-image img{
-  width: 50%;
-  height: 70%;
-  border-radius: 12px;
-}
-
-.hero-image .time {
-  position: absolute;
-  bottom: 10%;
-  left: 20%;
-  transform: translateX(-50%);
-  background-color: white;
-  border: 1px solid #2563EB;
-  padding: 10px 40px;
-  border-radius: 10px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  text-align: center;
-} 
-
-.hero-image .time p {
-  margin: 0;
-}
-
-.hero-image .time-1 {
-  font-size: 1.2em;
-  font-weight: bold;
-  color: black;
-}
-
-.hero-image .time-3 {
-  font-size: 1em;
-  color:#1E40AF;
-}
-
-.hero-image hr {
-  margin: .5em;
-}
-
-.hero-image i {
-  color: #1E40AF;
-}
-
-/*--------END------------------Hero Image CSS-------------------------------------*/
-
+/*--------END------------------Hero Section CSS-------------------------------------*/
 
 
 
@@ -354,5 +327,5 @@ body {
 .machine:hover .machine__info-hover {
   opacity: 1;
 }
-/*-------------END--------------------Machine Card CSS-----------------------------------*/
 
+/*-------------END--------------------Machine Card CSS-----------------------------------*/
