@@ -20,7 +20,6 @@ html {
   align-items: end;
   height: 750px;
   overflow: hidden;
-  box-shadow: inset 0 0 20px rgb(0, 0, 0, 1);
 }
 
 .hero-section::before {
@@ -30,22 +29,29 @@ html {
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: url('/images/bg_herosection.png');
+  background-image: url('/images/myriam-zilles-7V95FwS2Ss4-unsplash.jpg');
   background-size: cover;
-  background-position: bottom;
-  filter: blur(0px);
+  background-position: center;
+  filter: blur(2px);
   z-index: -1;
 }
 
 .hero-text {
   text-align: left;
-  /* width: 100%; */
-  background: rgba(0, 0, 0, 0.05); 
-  border-radius: 20px;
+}
+
+.hero-section .hero-image {
+  position: absolute;
+  top: 16%;
+  left: 5%;
+  transform: translate(-50%, -50%);
+  width: 150px;
+  height: auto;
 }
 
 .hero-section .heart {
-  position: relative;
+  position: absolute;
+  top: 10%;
   margin-bottom: 20px;
   background-color: #E5FCF7;
   padding: .5em;
@@ -88,8 +94,7 @@ html {
 }
 
 .medical-word {
-  color: black;
-  /* blue */
+  color: white;
   text-decoration: underline;
 }
 
@@ -153,26 +158,26 @@ html {
 
 .phrases {
   display: flex;
-  gap: 100px;
+  gap: 115px;
   justify-content: center;
 }
 
 .phrases .catchy {
   display: flex;
   flex-direction: column;
-  /* align-items: center; */
+  align-items: center;
 }
 
 .phrases .years {
   font-size: 2em;
   font-weight: bold;
   margin: 0;
-  color: gold;
+  color: black;
 }
 
 .phrases .experience {
   font-size: .9em;
-  color: white;
+  color: black;
   margin: 0;
 }
 
