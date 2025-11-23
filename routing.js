@@ -1,4 +1,4 @@
-// List of allowed pages (to avoid loading wrong files)
+// List of allowed pages
 const routes = ["home", "about", "timeline", "services", "contact"];
 
 // Load CSS dynamically
@@ -45,6 +45,11 @@ function loadPage(page) {
 
 // Router function
 function router() {
+    // Check if we are on home.html directly, then skip routing
+    if (window.location.pathname.endsWith("home.html")) {
+        return; // do nothing
+    }
+
     let hash = location.hash.replace("#", "");
     if (!hash) hash = "home"; // default page
     if (!routes.includes(hash)) hash = "home";
