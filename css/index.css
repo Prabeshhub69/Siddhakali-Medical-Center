@@ -7,80 +7,83 @@ body {
 
 
 header {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .logos {
     display: flex;
     justify-content: center;
     align-items: center;
-    /* gap: 20px; */
 }
 
-h1 {
-    font-size: 1rem;
-    font-weight: 700;
-    color: black;
-    font-weight: bold;
+/* ===== NAVBAR WRAPPER ===== */
+#main-navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 2000;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    /* transparent glass */
+    box-shadow: 0 4px 25px rgba(0, 0, 0, 0.15);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+    padding: 4px 0;
 }
 
-.navbar img {
-    height: 50px;
-    width: auto;
-}
-
+/* ===== INNER NAVBAR ===== */
 .navbar {
-    background-color: white;
-    padding: .5em 1em .5em 1em;
-    width: 60%;
-    border-radius: 50px;
-    color: white;
+    width: 100%;
+    margin: 0 auto;
+    gap: 40px;
+    padding: 0 30px;
+}
+
+/* ===== LOGO SECTION ===== */
+.logos img {
+    width: 70px;
+    height: auto;
+}
+
+/* ===== NAV LINKS ===== */
+.nav {
     display: flex;
-    align-items: center;
-    justify-content: space-between;
-    box-shadow: 
-        4px 0 4px rgba(183, 183, 183, 0), 
-        -4px 0 4px rgba(183, 183, 183, 0), 
-        0 5px 4px rgba(183, 183, 183, 0.4);
+    gap: 30px;
 }
 
-.navbar .nav {
-    gap: 35px;
+.nav a {
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: #fff;
     text-decoration: none;
-    text-align: start;
-}
-
-.navbar .nav a {
-    text-decoration: none;
-    color: black;
-    font-size: 1rem;
+    padding: 8px 15px;
+    border-radius: 12px;
+    transition: 0.25s ease;
 }
 
 .nav a:hover {
-    color: black;
+    background: rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(4px);
+    transform: translateY(-2px);
 }
 
-.navbar .contact {
-    padding: .4em 1.3em .3em 1.4em;
-    background-color:#2563EB;
-    border-radius: 18px;
-}
-
-.navbar .contact:hover {
-    background-color: #2a6dff;
-    
-}
-
-.navbar .contact a {
+/* ===== CONTACT BUTTON ===== */
+.contact a {
+    font-size: 18px;
+    font-weight: 600;
     text-decoration: none;
-    color: white;
-    font-size: 1.1rem;
+    padding: 6px 22px;
+    border-radius: 14px;
+    background: rgba(255, 255, 255, 0.3);
+    color: black;
+    backdrop-filter: blur(6px);
+    transition: 0.3s;
+    border: 1px solid rgba(255, 255, 255, 0.4);
 }
 
-.navbar .contact a:hover {
-    color: white;
+.contact a:hover {
+    background: rgba(255, 255, 255, 0.5);
+    transform: translateY(-3px);
 }
-
-

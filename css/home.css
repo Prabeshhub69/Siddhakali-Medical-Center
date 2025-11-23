@@ -13,18 +13,12 @@ html {
   padding: 0;
 }
 
-
-/* .hero-section { 
-  background-image: url('/images/bg-herosection.jpg');
-  background-size: cover;
-  background-position: top;
-  height: 750px;
-} */
-
 .hero-section {
   position: relative;          /* needed for pseudo-element positioning */
   height: 750px;
   overflow: hidden;            /* ensures blur doesn’t overflow */
+  box-shadow: inset 0 0 20px rgb(0, 0, 0, 1);
+
 }
 
 .hero-section::before {
@@ -34,15 +28,12 @@ html {
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: url('/images/Gemini_Generated_Image_h0v1xdh0v1xdh0v1.png');
-  background-size:300vh;
-  background-position: center;
-  filter: blur(2px);           /* adjust the blur */
+  background-image: url('/images/bg_herosection.png');
+  background-size:cover;
+  background-position: bottom;
+  filter: blur(3px);           /* adjust the blur */
   z-index: -1;                 /* behind the content */
-}
-
-.hero {
-  margin-top: -100px;  
+  
 }
 
 .row {
@@ -54,7 +45,6 @@ html {
   flex-direction: column;
   justify-content: center;
   gap: 20px;
-  padding-top: 100px;
 }
 
 .hero-text .heart {
@@ -168,7 +158,6 @@ html {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding-top: 100px;
 }
 
 .hero-image img{
