@@ -7,6 +7,8 @@
 
 :root {
   --catchy-color: #2563EB;
+  --grey-theme: #F5F5F5;
+  --paragraph-color: rgb(64, 64, 64);
 }
 
 body,
@@ -17,9 +19,76 @@ html {
   padding: 0;
 }
 
+.container {
+  max-width: 1450px;
+}
+
 .hero-section {
   /* background-color: black; */
-  height: 650px;
+  height: 625px;
+  border-radius: 20px;
+}
+
+.hero-section .row {
+  display: flex;
+  gap: 20px;
+  height: 100%;
+}
+
+.hero-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 600px;
+  padding-left: 20px;
+  border-radius: 10px;
+  position: relative;
+  flex: 1 0 auto;
+}
+
+.hero-text::after {
+  content: "";
+  position: absolute;
+  bottom: 0px;
+  right: -0px;
+  width: 80px;    
+  height: 80px;
+  background: white;
+  border-top-left-radius: 80px;
+  box-shadow: -10px 10px 20px rgba(255, 255, 255, 0.05);
+}
+
+.hero-image {
+  width: 600px;
+  background: #f6f6f6 ;
+  border-radius: 10px;
+  position: relative;
+  flex: 1 0 auto;
+  overflow: hidden;
+}
+
+/* Inset corner (bottom-left example) */
+.hero-image::after {
+  content: "";
+  position: absolute;
+  bottom: 0px;
+  left: -0px;
+  width: 80px;     /* size of inward cut */
+  height: 80px;
+  background: white;
+  
+  /* This creates the pressed-in effect */
+  border-top-right-radius: 80px;
+
+  /* Blend into background */
+  box-shadow: -10px 10px 20px rgba(255, 255, 255, 0.05);
+}
+
+.hero-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
 }
 
 .hero-section .heart {
@@ -56,14 +125,14 @@ html {
 }
 
 .medical-word {
-  color: var(--catchy-color);
+  color:var(--catchy-color);
   text-decoration: underline;
 }
 
 .hero-text .paragraph1 {
   font-size: 1em;
   /* width: 60%; */
-  color: black;
+  color: var(--paragraph-color);
   text-align: left;
 }
 
@@ -98,7 +167,7 @@ html {
   background-color: #2563EB;
   color: white;
   border: none;
-  border-radius: 50px;
+  border-radius: 8px;
   font-size: 1.1rem;
   cursor: pointer;
   transition: transform 0.3s ease;
@@ -134,7 +203,7 @@ html {
   font-size: 2em;
   font-weight: bold;
   margin: 0;
-  color: black;
+  color: var(--catchy-color);
 }
 
 .phrases .experience {
