@@ -84,6 +84,6 @@ body {
 }
 
 .contact a:hover {
-    background: rgba(255, 255, 255, 0.5);
+    background: #1E40AF;
     transform: translateY(-3px);
 }
