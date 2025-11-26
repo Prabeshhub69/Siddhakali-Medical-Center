@@ -1,3 +1,13 @@
+:root {
+  --catchy-color: #2563EB;
+  --catchy-hover: #1E40AF;
+  --grey-theme: #fcfcfc;
+  --paragraph-color: rgb(64, 64, 64);
+  --light-blue: #F3F8FF;
+  --green-color: #E5FCF7;
+  --green-font: #147b59;
+}
+
 /* Basic styling */
 body {
     margin: 0;
@@ -6,7 +16,7 @@ body {
 }
 
 .logos .logo img {
-    height: 40px;
+    height: 45px;
     width: auto;
 }
 
@@ -26,7 +36,7 @@ body {
     -webkit-backdrop-filter: blur(12px);
     /* transparent glass */
     box-shadow: 0 4px 25px rgba(0, 0, 0, 0.15);
-    padding: 12px 0;
+    padding: 8px 0;
 }
 
 /* ===== INNER NAVBAR ===== */
@@ -75,15 +85,16 @@ body {
     font-size: 18px;
     font-weight: 600;
     text-decoration: none;
-    padding: 7px 26px;
+    padding: 8px 20px;
     border-radius: 14px;
-    background: #2563EB;
+    background: var(--green-font);
     color: white;
     backdrop-filter: blur(6px);
     transition: 0.3s;
 }
 
 .contact a:hover {
-    background: #1E40AF;
+    background: var(--green-color);
+    color: var(--green-font);
     transform: translateY(-3px);
 }

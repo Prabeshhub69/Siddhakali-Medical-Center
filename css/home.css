@@ -8,9 +8,11 @@
 :root {
   --catchy-color: #2563EB;
   --catchy-hover: #1E40AF;
-  --grey-theme: #F5F5F5;
+  --grey-theme: #fcfcfc;
   --paragraph-color: rgb(64, 64, 64);
   --light-blue: #F3F8FF;
+  --green-color: #E5FCF7;
+  --green-font: #147b59;
 }
 
 body,
@@ -61,6 +63,12 @@ html {
   box-shadow: -10px 10px 20px rgba(255, 255, 255, 0.05);
 }
 
+.main-texts {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
 .hero-image {
   width: 600px;
   background: #f6f6f6 ;
@@ -68,23 +76,6 @@ html {
   position: relative;
   flex: 1 0 auto;
   overflow: hidden;
-}
-
-/* Inset corner (bottom-left example) */
-.hero-image::after {
-  content: "";
-  position: absolute;
-  bottom: 0px;
-  left: -0px;
-  width: 80px;     /* size of inward cut */
-  height: 80px;
-  background: white;
-  
-  /* This creates the pressed-in effect */
-  border-top-right-radius: 80px;
-
-  /* Blend into background */
-  box-shadow: -10px 10px 20px rgba(255, 255, 255, 0.05);
 }
 
 .hero-image img {
@@ -95,8 +86,7 @@ html {
 }
 
 .hero-section .heart {
-  background-color: #E5FCF7;
-  padding: .5em;
+  padding: .5em .5em .5em 0;
   width: fit-content;
   margin-bottom: 0 !important;
   border-radius: 25px;
@@ -110,6 +100,10 @@ html {
 .hero-section .heart:hover {
   transform: scale(1.05);
   cursor: default;
+}
+
+.hero-section .heart i {
+  color: var(--green-font);
 }
 
 .hero-section .heart {
@@ -128,21 +122,19 @@ html {
 }
 
 .medical-word {
-  color:var(--catchy-color);
-  text-decoration: underline;
+  color:black;
+  /* text-decoration: underline; */
 }
 
 .hero-text .paragraph1 {
-  font-size: 1em;
-  /* width: 60%; */
+  font-size: 1.1em;
+  width: 90%;
   color: var(--paragraph-color);
   text-align: left;
 }
 
 .hero-text .hero-buttons {
   display: flex;
-  justify-content: center;
-  padding: 20px;
   gap: 20px;
 }
 
@@ -150,8 +142,8 @@ html {
   width: 150px;
   height: 50px;
   background-color: white;
-  color: #2155c6;
-  border: 2px solid #2563EB;
+  color: var(--green-font);
+  border: 2px solid var(--green-font);
   border-radius: 50px;
   font-size: 1.1rem;
   cursor: pointer;
@@ -159,25 +151,26 @@ html {
 }
 
 .hero-text .button-contact:hover {
-  background-color: #EFF6FF;
-  color: #2155c6;
+  background-color: var(--green-color);
+  color: var(--green-font);
   transform: scale(1.05);
 }
 
 .hero-text .button-appointment {
-  width: 230px;
+  width: 210px;
   height: 50px;
-  background-color: var(--catchy-hover);
-  color: white;
+  background-color: var(--green-font);
+  color: var(--green-color);
   border: none;
-  border-radius: 8px;
+  border-radius: 50px;
   font-size: 1.1rem;
   cursor: pointer;
   transition: transform 0.3s ease;
 }
 
 .hero-text .button-appointment:hover {
-  background-color: #1E40AF;
+  background-color: var(--green-font);
+  color: white;
   transform: scale(1.05);
 }
 
@@ -190,30 +183,6 @@ html {
   transition: margin-left 0.3s ease;
 }
 
-.phrases {
-  display: flex;
-  gap: 115px;
-  justify-content: center;
-}
-
-.phrases .catchy {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.phrases .years {
-  font-size: 2em;
-  font-weight: bold;
-  margin: 0;
-  color: var(--catchy-color);
-}
-
-.phrases .experience {
-  font-size: .9em;
-  color: black;
-  margin: 0;
-}
 
 /*--------END------------------Hero Section CSS-------------------------------------*/
 
@@ -225,7 +194,7 @@ html {
 }
 
 .flags-container {
-  background-color: var(--light-blue);
+  background-color: white;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -256,9 +225,9 @@ html {
 .card {
   border: none;
   flex: 0 1 5em;
-  height: 4em;
+  height: 5em;
   padding: 1em;
-  background-color: var(--light-blue);
+  background-color: white;
   font-size: 2rem;
   border-radius: .2em;
   text-align: center;
@@ -275,22 +244,82 @@ html {
   from {translate: 0;}
   to {translate: -100%;}
 }
+/*--------END-----Countries Section CSS-------------------------------------*/
 
+.third-component {
+  background-color: var(--grey-theme);
+  padding: 2em;
+}
 
+.experienced {
+  display: flex;
+}
 
+.image-wrapper {
+  position: relative;
+  width: 650px;
+}
 
+.experienced-image {
+  background-image: url("/images/other_images/lab.jpg");
+  width: 100%;
+  height: 500px;
+  background-size: cover;
+  background-position: bottom;
+  border-radius: 12px;
+  position: relative;
+  z-index: 1;
+}
 
+.experienced-text {
+  position: absolute;
+  top: 40%;
+  left: 80%;
+  transform: translateY(-50%);
+  background: white;
+  padding: 25px 30px;
+  width: 500px;
+  border-radius: 12px;
+  box-shadow: 3px 7px 12px rgba(0, 0, 0, 0.15);
+  z-index: 2;
+}
 
+.experienced-text h4 {
+  margin: 0;
+  font-size: 1.5em;
+  padding: 0 0 .5em 0;
+}
 
+.experienced-text p {
+  margin: 0;
+  color: var(--paragraph-color);
+  font-size: .8em;
+}
 
+.phrases {
+  display: flex;
+  gap: 115px;
+  justify-content: center;
+}
 
+.phrases .catchy {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
+.phrases .years {
+  font-size: 2em;
+  font-weight: bold;
+  margin: 0;
+  color: var(--green-font);
+}
 
-
-
-
-/*--------END------------------Countries Section CSS-------------------------------------*/
-
+.phrases .experience {
+  font-size: .9em;
+  color: var(--paragraph-color);
+  margin: 0;
+}
 
 /*--------START------------------Machine Card CSS-------------------------------------*/
 body {
@@ -301,11 +330,16 @@ body {
   align-items: center;
 }
 
+.machine-container {
+  background-color: var(--grey-theme);
+  padding: 30px;
+}
+
 .machines {
   width: 100%;
   gap: 25px;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
   -webkit-justify-content: center;
 }
@@ -314,45 +348,30 @@ body {
   display: flex;
   align-items: center;
   gap: 25px;
-  width: 90%;
-}
-
-.machines .button-viewall {
-  background-color: var(--catchy-color);
-  color: white;
-  width: 70px;
-  height: 70px;
-  border-radius: 50%;
-  font-size: smaller;
-  border: none;
-}
-
-.machines .button-viewall:hover {
-  background-color: var(--catchy-hover);
-  cursor: pointer;
+  width: 70%;
 }
 
 .machine--1 .machine__img,
 .machine--1 .machine__img--hover {
-  background-image: url('/images/Bacteriogolical_Incubator.webp');
+  background-image: url('/images/machines/Drying_Oven.webp');
   background-size: contain;
 }
 
 .machine--2 .machine__img,
 .machine--2 .machine__img--hover {
-  background-image: url('/images/Chemistry_Analyzer.webp');
+  background-image: url('/images/machines/Chemistry_Analyzer.webp');
   background-size: contain;
 }
 
 .machine--3 .machine__img,
 .machine--3 .machine__img--hover {
-  background-image: url('/images/CLIA.webp');
+  background-image: url('/images/machines/CLIA.webp');
   background-size: contain;
 }
 
 .machine--4 .machine__img,
 .machine--4 .machine__img--hover {
-  background-image: url('/images/HPLC.webp');
+  background-image: url('/images/machines/HPLC.webp');
   background-size: contain;
 }
 
@@ -362,10 +381,9 @@ body {
   background-position: center;
   background-repeat: no-repeat;
   width: 100%;
-  height: 235px;
+  height: 180px;
   border-top-left-radius: 12px;
   border-top-right-radius: 12px;
-
 }
 
 .machine__info-hover {
@@ -383,17 +401,17 @@ body {
   background-repeat: no-repeat;
   width: 100%;
   position: absolute;
-  height: 235px;
+  height: 180px;
   border-top-left-radius: 12px;
   border-top-right-radius: 12px;
   top: 0;
 }
 
 .machine {
-  margin-right: 25px;
   transition: all .4s cubic-bezier(0.175, 0.885, 0, 1);
   background-color: #fff;
-  width: 30%;
+  width: 25%;
+  height: auto;
   position: relative;
   border-radius: 12px;
   overflow: hidden;
@@ -402,15 +420,22 @@ body {
 
 .machine:hover {
   box-shadow: 0px 30px 18px -8px rgba(0, 0, 0, 0.1);
-  transform: scale(1.0, 1.10);
+  transform: scale(1.0, 1.05);
 }
 
 .machine__info {
   z-index: 2;
+  display: flex;
+  flex-direction: column;
   background-color: #fff;
   border-bottom-left-radius: 12px;
   border-bottom-right-radius: 12px;
-  padding: 16px 24px 24px 24px;
+  padding: 16px 20px 20px 20px;
+}
+
+.machine__info .machine__title {
+  font-weight: 500;
+  font-family: "Saira", sans-serif;
 }
 
 .machine__title {
@@ -445,6 +470,31 @@ body {
 
 .machine:hover .machine__info-hover {
   opacity: 1;
+}
+
+.view-more-btn button {
+  padding: 5px 10px;
+  font-size: 1rem;
+  color: white;
+  background-color: var(--green-font);
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.view-more-btn button:hover {
+  background-color: var(--catchy-hover);
+}
+
+.machines-header h5 {
+  font-family: "Saira", sans-serif;
+  font-size: 1.5em;
+}
+
+.machines-header p {
+  font-family: 'Saira', sans-serif;
+  font-size: 0.8em;
 }
 
 /*-------------END--------------------Machine Card CSS-----------------------------------*/
