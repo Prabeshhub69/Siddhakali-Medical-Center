@@ -17,6 +17,7 @@
 
 body,
 html {
+  font-family: "Ubuntu", sans-serif;
   margin-top: 0;
   width: 100%;
   height: 100%;
@@ -194,7 +195,7 @@ html {
 }
 
 .flags-container {
-  background-color: white;
+  background-color: var(--grey-theme);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -227,7 +228,7 @@ html {
   flex: 0 1 5em;
   height: 5em;
   padding: 1em;
-  background-color: white;
+  background-color: var(--grey-theme);
   font-size: 2rem;
   border-radius: .2em;
   text-align: center;
@@ -246,9 +247,10 @@ html {
 }
 /*--------END-----Countries Section CSS-------------------------------------*/
 
+/*--------START------------------Third Container CSS-------------------------------------*/
 .third-component {
-  background-color: var(--grey-theme);
-  padding: 2em;
+  /* background-color: var(--grey-theme); */
+  padding: 2em 2em 2em 10em;
 }
 
 .experienced {
@@ -273,12 +275,12 @@ html {
 
 .experienced-text {
   position: absolute;
-  top: 40%;
-  left: 80%;
+  top: 45%;
+  left: 90%;
   transform: translateY(-50%);
   background: white;
   padding: 25px 30px;
-  width: 500px;
+  width: 550px;
   border-radius: 12px;
   box-shadow: 3px 7px 12px rgba(0, 0, 0, 0.15);
   z-index: 2;
@@ -288,6 +290,7 @@ html {
   margin: 0;
   font-size: 1.5em;
   padding: 0 0 .5em 0;
+  font-weight: 500;
 }
 
 .experienced-text p {
@@ -297,8 +300,12 @@ html {
 }
 
 .phrases {
+  position: absolute;
+  top: 65%;
+  left: 90%;
+  z-index: 2;
   display: flex;
-  gap: 115px;
+  gap: 50px;
   justify-content: center;
 }
 
@@ -306,23 +313,31 @@ html {
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 150px;
+  background-color: white;
+  box-shadow: 3px 7px 12px rgba(0, 0, 0, 0.15);
+  padding: 10px 20px 10px 20px;
+  border-radius: 12px;
 }
 
 .phrases .years {
-  font-size: 2em;
+  font-size: 1.5em;
   font-weight: bold;
   margin: 0;
   color: var(--green-font);
 }
 
 .phrases .experience {
-  font-size: .9em;
+  font-size: .6em;
   color: var(--paragraph-color);
   margin: 0;
 }
+/*--------END------------------Third Container CSS-------------------------------------*/
+
 
 /*--------START------------------Machine Card CSS-------------------------------------*/
 body {
+  font-family: "Ubuntu", sans-serif;
   background-color: #ffffff;
   -webkit-justify-content: center;
   -webkit-align-items: center;
@@ -435,7 +450,7 @@ body {
 
 .machine__info .machine__title {
   font-weight: 500;
-  font-family: "Saira", sans-serif;
+  font-family: "Ubuntu", sans-serif;
 }
 
 .machine__title {
@@ -488,12 +503,12 @@ body {
 }
 
 .machines-header h5 {
-  font-family: "Saira", sans-serif;
+  font-family: "Ubuntu", sans-serif;
   font-size: 1.5em;
 }
 
 .machines-header p {
-  font-family: 'Saira', sans-serif;
+  font-family: "Ubuntu", sans-serif;
   font-size: 0.8em;
 }
 
