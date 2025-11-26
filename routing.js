@@ -75,3 +75,4 @@ function highlightActiveLink(page) {
 // Trigger router on hash change or page load
 window.addEventListener("hashchange", router);
 window.addEventListener("load", router);
+
