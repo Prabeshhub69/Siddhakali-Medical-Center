@@ -129,7 +129,7 @@ html {
 }
 
 .hero-text .button-contact {
-  width: 150px;
+  width: 210px;
   height: 50px;
   background-color: white;
   color: var(--green-font);
@@ -270,12 +270,12 @@ html {
 
 .experienced-text {
   position: absolute;
-  top: 45%;
+  top: 40%;
   left: 90%;
   transform: translateY(-50%);
   background: white;
-  padding: 25px 30px;
-  width: 550px;
+  padding: 35px 40px;
+  width: 740px;
   border-radius: 12px;
   box-shadow: 3px 7px 12px rgba(0, 0, 0, 0.15);
   z-index: 2;
@@ -283,7 +283,7 @@ html {
 
 .experienced-text h4 {
   margin: 0;
-  font-size: 1.5em;
+  font-size: 1.8em;
   padding: 0 0 .5em 0;
   font-weight: 500;
 }
@@ -291,7 +291,7 @@ html {
 .experienced-text p {
   margin: 0;
   color: var(--paragraph-color);
-  font-size: .8em;
+  font-size: .9em;
 }
 
 .phrases {
@@ -300,7 +300,7 @@ html {
   left: 90%;
   z-index: 2;
   display: flex;
-  gap: 50px;
+  gap: 100px;
   justify-content: center;
 }
 
@@ -308,7 +308,7 @@ html {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 150px;
+  width: 180px;
   background-color: white;
   box-shadow: 3px 7px 12px rgba(0, 0, 0, 0.15);
   padding: 10px 20px 10px 20px;
@@ -316,14 +316,14 @@ html {
 }
 
 .phrases .years {
-  font-size: 1.5em;
+  font-size: 1.8em;
   font-weight: bold;
   margin: 0;
   color: var(--green-font);
 }
 
 .phrases .experience {
-  font-size: .6em;
+  font-size: .8em;
   color: var(--paragraph-color);
   margin: 0;
 }
@@ -442,6 +442,7 @@ body {
   border-bottom-left-radius: 12px;
   border-bottom-right-radius: 12px;
   padding: 16px 20px 20px 20px;
+  gap:.5em;
 }
 
 .machine__info .machine__title {
@@ -643,6 +644,11 @@ body {
   z-index: 10;
 }
 
+.features-container h3 {
+  font-size: 1.3em;
+  font-weight: bold;
+}
+
 @media (min-width: 768px) {
   .features-grid {
     grid-template-columns: repeat(2, 1fr);
@@ -767,7 +773,7 @@ body {
 }
 
 .feature-description {
-  font-size: 0.8em;
+  font-size: 0.9em;
   color: #6b7280;
   max-width: 320px;
   position: relative;
