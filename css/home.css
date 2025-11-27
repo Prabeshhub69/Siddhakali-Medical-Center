@@ -501,12 +501,12 @@ body {
 
 .machines-header h5 {
   font-family: "Ubuntu", sans-serif;
-  font-size: 1.5em;
+  font-size: 1.8em;
 }
 
 .machines-header p {
   font-family: "Ubuntu", sans-serif;
-  font-size: 0.8em;
+  font-size: 0.9em;
 }
 
 .interactive-button {
@@ -645,7 +645,6 @@ body {
 }
 
 .features-container h3 {
-  font-size: 1.3em;
   font-weight: bold;
 }
 
@@ -968,3 +967,5 @@ body {
     font-size: 0.8rem;
   }
 }
+
+

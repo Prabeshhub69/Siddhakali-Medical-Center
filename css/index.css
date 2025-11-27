@@ -1,11 +1,11 @@
 :root {
-  --catchy-color: #2563EB;
-  --catchy-hover: #1E40AF;
-  --grey-theme: #fcfcfc;
-  --paragraph-color: rgb(64, 64, 64);
-  --light-blue: #F3F8FF;
-  --green-color: #E5FCF7;
-  --green-font: #147b59;
+    --catchy-color: #2563EB;
+    --catchy-hover: #1E40AF;
+    --grey-theme: #fcfcfc;
+    --paragraph-color: rgb(64, 64, 64);
+    --light-blue: #F3F8FF;
+    --green-color: #E5FCF7;
+    --green-font: #147b59;
 }
 
 /* Basic styling */
@@ -98,4 +98,245 @@ body {
     background: var(--green-color);
     color: var(--green-font);
     transform: translateY(-3px);
+}
+
+/*----START---FOOTER CSS-----------*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.footer {
+    background-color: var(--grey-theme);
+    color: #000000;
+    padding: 80px 0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.footer-left {
+    flex: 1;
+    min-width: 280px;
+    max-width: 400px;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 24px;
+}
+
+.logo-container img {
+    height: 40px;
+    width: auto;
+    object-fit: contain;
+    margin-left: -12px;
+}
+
+.logo-container h2 {
+    font-size: 20px;
+    font-weight: 600;
+    color: #000000;
+}
+
+.footer-description {
+    font-size: 14px;
+    line-height: 1.6;
+    color: var(--paragraph-color);
+    margin-bottom: 24px;
+    max-width: 70%;
+}
+
+.social-links {
+    display: flex;
+    gap: 24px;
+    list-style: none;
+    padding: 0;
+}
+
+.social-links .ph-number {
+    display: flex;
+    justify-content: center;
+    align-items: top;
+    gap: 8px;
+    margin-top: 2px;
+}
+
+.social-links .ph-number p {
+    color: var(--paragraph-color);
+}
+
+.social-links .ph-number i {
+    color: var(--green-font);
+}
+
+.social-links a {
+    color: #666666;
+    font-size: 20px;
+    transition: color 0.3s ease;
+    text-decoration: none;
+}
+
+.social-links a:hover {
+    color: #000000;
+}
+
+.footer-sections {
+    flex: 1;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    min-width: 500px;
+}
+
+.footer-section h3 {
+    font-size: 16px;
+    font-weight: 700;
+    color: #000000;
+    margin-bottom: 16px;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 12px;
+}
+
+.footer-section ul li a {
+    color: #666666;
+    font-size: 14px;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-section ul li a:hover {
+    color: #000000;
+}
+
+.footer-bottom {
+    margin-top: 32px;
+    padding-top: 32px;
+    border-top: 1px solid #e5e5e5;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 16px;
+    font-size: 12px;
+    color: var(--green-font);
+}
+
+.legal-links {
+    display: flex;
+    gap: 16px;
+    list-style: none;
+}
+
+.legal-links a {
+    color: var(--green-font);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.legal-links a:hover {
+    color: #000000;
+}
+
+/* Tablet breakpoint - 768px to 1023px */
+@media (max-width: 1023px) {
+    .footer-sections {
+        min-width: auto;
+        gap: 30px;
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Small tablet / Large mobile - 768px and below */
+@media (max-width: 768px) {
+    .footer {
+        padding: 60px 0;
+    }
+
+    .footer-content {
+        flex-direction: column;
+    }
+
+    .footer-left {
+        max-width: 100%;
+    }
+
+    .footer-description {
+        max-width: 100%;
+    }
+
+    .footer-sections {
+        grid-template-columns: 1fr;
+        gap: 32px;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .legal-links {
+        flex-direction: column;
+        gap: 8px;
+    }
+}
+
+/* Mobile landscape - 576px and below */
+@media (max-width: 576px) {
+    .footer {
+        padding: 48px 0;
+    }
+
+    .logo-container h2 {
+        font-size: 18px;
+    }
+
+    .social-links {
+        padding: 0;
+        gap: 20px;
+    }
+
+    .social-links a {
+        font-size: 18px;
+    }
+}
+
+/* Small mobile - 360px and below */
+@media (max-width: 360px) {
+    .footer {
+        padding: 40px 0;
+    }
+
+    .container {
+        padding: 0 16px;
+    }
+
+    .footer-section h3 {
+        font-size: 15px;
+    }
+
+    .footer-section ul li a {
+        font-size: 13px;
+    }
 }
