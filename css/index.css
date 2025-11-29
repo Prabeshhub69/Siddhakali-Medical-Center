@@ -21,7 +21,6 @@ body {
     width: auto;
 }
 
-
 #app {
     padding-top: 70px;
 }
@@ -35,17 +34,25 @@ body {
     z-index: 2000;
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
-    /* transparent glass */
     box-shadow: 0 4px 25px rgba(0, 0, 0, 0.15);
     padding: 8px 0;
 }
 
 /* ===== INNER NAVBAR ===== */
 .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     width: 100%;
+    max-width: 100%;
     margin: 0 auto;
-    gap: 40px;
     padding: 4px 60px;
+}
+
+.logos {
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
 }
 
 .logos a {
@@ -57,7 +64,10 @@ body {
 /* ===== NAV LINKS ===== */
 .nav {
     display: flex;
+    align-items: center;
     gap: 50px;
+    flex: 1;
+    justify-content: center;
 }
 
 .nav a {
@@ -78,10 +88,16 @@ body {
 
 .nav a.active {
     color: var(--green-font) !important;
-    /* border-bottom: 2px solid #2563EB; */
+    font-weight: bold;
 }
 
 /* ===== CONTACT BUTTON ===== */
+.contact {
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+}
+
 .contact a {
     font-size: 18px;
     font-weight: 600;
@@ -100,6 +116,180 @@ body {
     transform: translateY(-3px);
 }
 
+/* ===== HAMBURGER MENU ===== */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    padding: 8px;
+    z-index: 2001;
+}
+
+.hamburger span {
+    width: 28px;
+    height: 3px;
+    background: var(--green-font);
+    margin: 3px 0;
+    transition: 0.3s;
+    border-radius: 2px;
+}
+
+.hamburger.active span:nth-child(1) {
+    transform: rotate(45deg) translate(8px, 8px);
+}
+
+.hamburger.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(8px, -8px);
+}
+
+/* ===== MOBILE & TABLET RESPONSIVE ===== */
+@media screen and (max-width: 1024px) {
+    .navbar {
+        padding: 4px 30px;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+
+    .nav {
+        position: fixed;
+        top: 70px;
+        right: -100%;
+        flex-direction: column;
+        background: rgba(255, 255, 255, 0.98);
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+        width: 280px;
+        height: calc(100vh - 70px);
+        padding: 40px 30px;
+        gap: 25px;
+        box-shadow: -4px 0 20px rgba(0, 0, 0, 0.1);
+        transition: right 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+        justify-content: flex-start;
+    }
+
+    .nav.active {
+        right: 0;
+    }
+
+    .nav a {
+        font-size: 1.15rem;
+        padding: 12px 20px;
+        border-radius: 8px;
+        width: 100%;
+        text-align: left;
+    }
+
+    .nav a:hover {
+        background: var(--green-color);
+        color: var(--green-font);
+    }
+
+    .contact {
+        position: fixed;
+        top: 70px;
+        right: -100%;
+        width: 280px;
+        padding: 0 30px;
+        transition: right 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+        margin-top: 330px;
+    }
+
+    .contact.active {
+        right: 0;
+    }
+
+    .contact a {
+        display: block;
+        text-align: left;
+        width: 100%;
+        padding: 12px 20px;
+        font-size: 1.15rem;
+        border-radius: 8px;
+    }
+
+    /* Overlay for mobile menu */
+    .nav-overlay {
+        display: none;
+        position: fixed;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        height: calc(100vh - 70px);
+        background: rgba(0, 0, 0, 0.5);
+        z-index: 1999;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+    }
+
+    .nav-overlay.active {
+        display: block;
+        opacity: 1;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .navbar {
+        padding: 4px 20px;
+    }
+
+    .logos .logo img {
+        height: 38px;
+    }
+
+    .nav {
+        width: 260px;
+        padding: 30px 20px;
+    }
+
+    .contact {
+        width: 260px;
+        right: -100%;
+        padding: 0 20px;
+        margin-top: 20px;
+    }
+
+    .contact.active {
+        right: 0;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .navbar {
+        padding: 4px 15px;
+    }
+
+    .logos .logo img {
+        height: 35px;
+    }
+
+    .nav {
+        width: 100%;
+        right: -100%;
+        padding: 25px 15px;
+    }
+
+    .nav.active {
+        right: 0;
+    }
+
+    .contact {
+        width: 100%;
+        right: -100%;
+        padding: 0 15px;
+        margin-top: 270px;
+    }
+
+    .contact.active {
+        right: 0;
+    }
+}
+
 /*----START---FOOTER CSS-----------*/
 
 * {
@@ -115,7 +305,7 @@ body {
 }
 
 .container {
-    max-width: 1200px;
+    max-width: 1450px;
     margin: 0 auto;
     padding: 0 20px;
 }

@@ -1,3 +1,13 @@
+:root {
+    --catchy-color: #2563EB;
+    --catchy-hover: #1E40AF;
+    --grey-theme: #fcfcfc;
+    --paragraph-color: rgb(64, 64, 64);
+    --light-blue: #F3F8FF;
+    --green-color: #E5FCF7;
+    --green-font: #147b59;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -27,12 +37,12 @@ body {
     font-weight: 700;
     letter-spacing: 0.05em;
     margin-bottom: 8px;
-    color: #000000;
+    color: var(--green-font);
 }
 
 .blog-header p {
     font-size: 16px;
-    color: #666666;
+    color: var(--paragraph-color);
     line-height: 1.5;
 }
 
