@@ -10,7 +10,7 @@ body {
 }
 
 .blog-container {
-    max-width: 1280px;
+    /* max-width: 1280px; */
     margin: 0 auto;
     background-color: #ffffff;
     position: relative;
@@ -19,7 +19,7 @@ body {
 
 /* Header Section */
 .blog-header {
-    padding: 32px 16px;
+    padding: 32px 50px;
 }
 
 .blog-header h1 {
@@ -53,8 +53,8 @@ body {
 .blog-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 0;
-    padding: 16px;
+    gap: 20px;
+    padding: 50px;
 }
 
 /* Blog Card */
