@@ -251,7 +251,7 @@ body {
         width: 260px;
         right: -100%;
         padding: 0 20px;
-        margin-top: 20px;
+        margin-top: 330px;
     }
 
     .contact.active {
@@ -283,6 +283,68 @@ body {
         right: -100%;
         padding: 0 15px;
         margin-top: 270px;
+    }
+
+    .contact.active {
+        right: 0;
+    }
+}
+
+@media screen and (max-width: 415px) {
+    .navbar {
+        padding: 4px 15px;
+    }
+
+    .logos .logo img {
+        height: 35px;
+    }
+
+    .nav {
+        width: 100%;
+        right: -100%;
+        padding: 25px 15px;
+    }
+
+    .nav.active {
+        right: 0;
+    }
+
+    .contact {
+        width: 100%;
+        right: -100%;
+        padding: 0 15px;
+        margin-top: 325px;
+    }
+
+    .contact.active {
+        right: 0;
+    }
+}
+
+@media screen and (max-width: 376px) {
+    .navbar {
+        padding: 4px 15px;
+    }
+
+    .logos .logo img {
+        height: 35px;
+    }
+
+    .nav {
+        width: 100%;
+        right: -100%;
+        padding: 25px 15px;
+    }
+
+    .nav.active {
+        right: 0;
+    }
+
+    .contact {
+        width: 100%;
+        right: -100%;
+        padding: 0 15px;
+        margin-top: 325px;
     }
 
     .contact.active {
