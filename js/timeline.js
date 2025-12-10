@@ -39,7 +39,7 @@ function initTimeline() {
     }
 
     function updateTimeline() {
-        const scrollPos = window.scrollY + window.innerHeight / 2;
+        const scrollPos = window.scrollY + window.innerHeight / 1.6;
         let activeIndex = 0;
 
         events.forEach((event, index) => {

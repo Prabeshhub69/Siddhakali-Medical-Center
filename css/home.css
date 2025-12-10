@@ -29,7 +29,7 @@ html {
 }
 
 .hero-section {
-  /* background-color: black; */
+  /* background-color: var(--green-color); */
   height: 625px;
   border-radius: 20px;
 }
@@ -244,8 +244,8 @@ html {
 
 /*--------START------------------Third Container CSS-------------------------------------*/
 .third-component {
-  /* background-color: var(--grey-theme); */
-  padding: 2em 2em 2em 1em;
+  /* background-color: var(--green-color); */
+  padding: 3em 3em 3em 6em;
 }
 
 .experienced {
@@ -296,12 +296,13 @@ html {
 
 .phrases {
   position: absolute;
-  top: 65%;
+  top: 60%;
   left: 90%;
   z-index: 2;
   display: flex;
-  gap: 100px;
+  gap: 80px;
   justify-content: center;
+  padding: 20px;
 }
 
 .phrases .catchy {
@@ -442,7 +443,7 @@ body {
   border-bottom-left-radius: 12px;
   border-bottom-right-radius: 12px;
   padding: 16px 20px 20px 20px;
-  gap:.5em;
+  gap: .5em;
 }
 
 .machine__info .machine__title {
@@ -622,9 +623,49 @@ body {
   min-height: 100vh;
 }
 
-/* .features {
-  background-color: var(--grey-theme);
-} */
+.features {
+  background-color: var(--green-color);
+}
+
+.parallax {
+  background-image: url('/images/other_images/reception.jpg');
+  height: 800px;
+  background-attachment: fixed;
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  color: #fff;
+  text-align: center;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* background: rgba(255, 255, 255,); */
+}
+
+.btn {
+  padding: 15px 30px;
+  background: rgba(0, 0, 0, 0.6);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: rgba(0, 0, 0, 0.8);
+}
 
 .features-container {
   max-width: 1445px;
@@ -967,5 +1008,3 @@ body {
     font-size: 0.8rem;
   }
 }
-
-
