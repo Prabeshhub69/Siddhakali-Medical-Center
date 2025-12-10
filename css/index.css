@@ -362,7 +362,7 @@ body {
 
 .footer {
     position: relative;
-    background-image: url('/images/other_images/blue-map-1024x576.jpg');
+    background-image: url('/images/other_images/footer_bg.jpg');
     background-size: cover;
     background-position: center;
     color: white;
