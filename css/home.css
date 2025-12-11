@@ -624,11 +624,11 @@ body {
 }
 
 .features {
-  background-color: var(--green-color);
+  background-color: var(--grey-theme);
 }
 
 .parallax {
-  background-image: url('/images/other_images/lab.jpg');
+  background-image: url('/images/other_images/reception.jpg');
   height: 800px;
   background-attachment: fixed;
   background-position: center;

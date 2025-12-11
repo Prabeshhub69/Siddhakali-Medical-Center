@@ -412,7 +412,6 @@ body {
     display: flex;
     align-items: center;
     gap: 12px;
-    margin-bottom: 24px;
 }
 
 .logo-container img {
@@ -423,13 +422,13 @@ body {
 }
 
 .logo-container h2 {
-    font-size: 20px;
+    font-size: 1.5em;
     font-weight: 600;
     color: white;
 }
 
 .footer-description {
-    font-size: 14px;
+    font-size: 1em;
     line-height: 1.6;
     color: white;
     margin-bottom: 24px;
