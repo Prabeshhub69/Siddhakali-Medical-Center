@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medical Examination Center Services</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f8f9fa;
+        }
+
+        .services-section {
+            padding: 60px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            font-size: 2rem;
+            font-weight: 600;
+            color: #1a1a1a;
+            margin-bottom: 10px;
+        }
+
+        .section-subtitle {
+            color: #666;
+            font-size: 0.95rem;
+            margin-bottom: 40px;
+        }
+
+        .main-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 12px;
+        }
+
+        .service-card {
+            background: white;
+            padding: 30px 25px;
+            border-radius: 12px;
+            height: 100%;
+        }
+
+        .service-icon {
+            width: 48px;
+            height: 48px;
+            margin-bottom: 20px;
+        }
+
+        .service-title {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: #1a1a1a;
+            margin-bottom: 12px;
+        }
+
+        .service-description {
+            color: #666;
+            font-size: 0.9rem;
+            line-height: 1.6;
+            margin: 0;
+        }
+
+        .highlighted-card {
+            background: linear-gradient(135deg, #d4a574 0%, #c89960 100%);
+            color: white;
+        }
+
+        .highlighted-card .service-title,
+        .highlighted-card .service-description {
+            color: white;
+        }
+
+        .view-all-btn {
+            background: linear-gradient(135deg, #d4a574 0%, #c89960 100%);
+            color: white;
+            border: none;
+            padding: 12px 32px;
+            border-radius: 25px;
+            font-size: 0.95rem;
+            font-weight: 500;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            margin-top: 40px;
+        }
+
+        .image-container {
+            width: 100%;
+            height: 100%;
+        }
+
+        .row > div {
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="services-section">
+        <h2 class="section-title">Excellent Services for our Patients</h2>
+        <p class="section-subtitle">Discover a wide range of opportunities through a comprehensive range of qualified services</p>
+        
+        <div class="row g-4">
+            <!-- Main Image -->
+            <div class="col-lg-4 col-md-6">
+                <div class="image-container">
+                    <img src="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?w=600&h=700&fit=crop" alt="Medical Center" class="main-image">
+                </div>
+            </div>
+
+            <!-- Services Column 1 -->
+            <div class="col-lg-4 col-md-6">
+                <div class="row g-4">
+                    <div class="col-12">
+                        <div class="service-card">
+                            <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                                <circle cx="12" cy="7" r="4"></circle>
+                                <path d="M12 14v7M9 18h6"></path>
+                            </svg>
+                            <h3 class="service-title">Health Checkup Packages</h3>
+                            <p class="service-description">Comprehensive medical screening services tailored to your health needs and age group</p>
+                        </div>
+                    </div>
+                    
+                    <div class="col-12">
+                        <div class="service-card">
+                            <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="3" y="3" width="18" height="18" rx="2"></rect>
+                                <path d="M9 11h6M12 8v6"></path>
+                            </svg>
+                            <h3 class="service-title">Diagnostic Imaging</h3>
+                            <p class="service-description">Discover a wide range of opportunities through range of opportunities through us.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="col-12">
+                        <div class="service-card">
+                            <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                                <polyline points="14 2 14 8 20 8"></polyline>
+                                <line x1="9" y1="15" x2="15" y2="15"></line>
+                            </svg>
+                            <h3 class="service-title">Clinical Laboratory Services</h3>
+                            <p class="service-description">Experience world-class laboratory testing with elegantly designed facilities</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Services Column 2 -->
+            <div class="col-lg-4 col-md-6">
+                <div class="row g-4">
+                    <div class="col-12">
+                        <div class="service-card">
+                            <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
+                            </svg>
+                            <h3 class="service-title">Cardiac Care & ECG</h3>
+                            <p class="service-description">Enjoy an array of activities including cardiac monitoring, ECG testing, and consultation</p>
+                        </div>
+                    </div>
+                    
+                    <div class="col-12">
+                        <div class="service-card">
+                            <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <path d="M12 6v6l4 2"></path>
+                            </svg>
+                            <h3 class="service-title">Same-Day Results</h3>
+                            <p class="service-description">Take a dip in our stunning infinity pools, relax in a private cabana</p>
+                        </div>
+                    </div>
+                    
+                    <div class="col-12">
+                        <div class="service-card highlighted-card">
+                            <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+                                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                                <circle cx="9" cy="7" r="4"></circle>
+                                <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                                <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                            </svg>
+                            <h3 class="service-title">Expert Consultation</h3>
+                            <p class="service-description">Indulge in the ultimate relaxation with our signature consultation services</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="text-center">
+            <button class="view-all-btn">
+                View All Services
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                    <polyline points="12 5 19 12 12 19"></polyline>
+                </svg>
+            </button>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    
+    <script>
+        // Button click event
+        document.querySelector('.view-all-btn').addEventListener('click', () => {
+            alert('View All Services clicked!');
+        });
+    </script>
+</body>
+</html>

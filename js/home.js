@@ -84,9 +84,5 @@ window.addEventListener("scroll", function () {
 // ABOUT US HOMEPAGE JS
 
 
-
-
-
-
-
+//Service home page
 
