@@ -77,9 +77,14 @@ function renderFeatures() {
 window.addEventListener("scroll", function () {
     let scrolled = window.pageYOffset;
     document.querySelectorAll(".parallax").forEach(el => {
-        el.style.backgroundPositionY = -(scrolled * 0.6) + "px";
+        el.style.backgroundPositionY = -(scrolled * 0.5) + "px";
     });
 });
+
+// ABOUT US HOMEPAGE JS
+
+
+
 
 
 

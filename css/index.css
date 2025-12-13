@@ -6,6 +6,7 @@
     --light-blue: #F3F8FF;
     --green-color: #E5FCF7;
     --green-font: #147b59;
+    --button-hover:rgb(25, 167, 120);
 }
 
 /* Basic styling */
@@ -111,8 +112,8 @@ body {
 }
 
 .contact a:hover {
-    background: var(--green-color);
-    color: var(--green-font);
+    background: var(--button-hover);
+    color: white;
     transform: translateY(-3px);
 }
 

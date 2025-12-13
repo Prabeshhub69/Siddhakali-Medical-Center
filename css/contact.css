@@ -117,9 +117,10 @@ textarea.form-control {
 }
 
 .btn-submit:hover {
-    background: #138496;
+    background: rgb(25, 167, 120);
+    color: white;
     transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(23, 162, 184, 0.3);
+    box-shadow: 0 4px 12px rgb(25, 167, 120, 0.4);
 }
 
 .btn-submit i {
