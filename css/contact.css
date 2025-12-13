@@ -1,95 +1,103 @@
-.contact-container {
-    max-width: 1400px;
-    margin: 50px auto;
-    padding: 0 20px;
+:root {
+    --catchy-color: #2563EB;
+    --catchy-hover: #1E40AF;
+    --grey-theme: #fcfcfc;
+    --paragraph-color: rgb(64, 64, 64);
+    --light-blue: #F3F8FF;
+    --green-color: #E5FCF7;
+    --green-font: #147b59;
 }
 
-.contact-heading {
-    font-size: 2rem;
+body {
+    font-family: "Ubuntu", sans-serif;
+    padding: 40px 0px 0px 0px;
+}
+
+.contact-section {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.section-title {
+    font-size: 2.5rem;
     font-weight: 700;
-    color: #1a1a1a;
-    margin-bottom: 12px;
+    color: #2c3e50;
+    margin-bottom: 15px;
 }
 
-.contact-subheading {
+.section-subtitle {
     color: #6c757d;
-    font-size: 0.95rem;
-    margin-bottom: 30px;
+    font-size: 1.1rem;
 }
 
 .info-card {
     background: white;
-    border-radius: 10px;
-    padding: 18px;
-    margin-bottom: 18px;
+    border-radius: 12px;
+    padding: 19px;
+    margin-bottom: 20px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
     display: flex;
     align-items: flex-start;
-    gap: 15px;
+    gap: 20px;
 }
 
 .icon-box {
-    background: linear-gradient(135deg, #2c8b8b 0%, #1a6b6b 100%);
-    width: 45px;
-    height: 45px;
+    background: var(--green-font);
+    color: white;
+    width: 55px;
+    height: 55px;
     border-radius: 10px;
     display: flex;
     align-items: center;
     justify-content: center;
+    font-size: 1.5rem;
     flex-shrink: 0;
 }
 
-.icon-box svg {
-    width: 22px;
-    height: 22px;
-    stroke: white;
-    fill: none;
-    stroke-width: 2;
-}
-
-.info-content h3 {
-    font-size: 1.1rem;
+.info-content h5 {
+    font-size: 1.25rem;
     font-weight: 600;
-    color: #1a1a1a;
+    color: #2c3e50;
     margin-bottom: 8px;
 }
 
 .info-content p {
     color: #6c757d;
-    margin-bottom: 4px;
-    font-size: 0.9rem;
+    margin: 0;
+    line-height: 1.6;
 }
 
-.form-section {
+.form-card {
     background: white;
     border-radius: 12px;
     padding: 40px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
 }
 
-.form-heading {
+.form-title {
     font-size: 2rem;
     font-weight: 700;
-    color: #1a1a1a;
+    color: #2c3e50;
     margin-bottom: 30px;
 }
 
 .form-label {
     font-weight: 600;
-    color: #1a1a1a;
+    color: #2c3e50;
+    margin-bottom: 8px;
 }
 
 .form-control,
 .form-control:focus {
-    border: 1px solid #dee2e6;
     border-radius: 8px;
-    padding: 12px 16px;
-    font-size: 0.95rem;
+    padding: 12px 15px;
+    border: 1px solid #dee2e6;
 }
 
 .form-control:focus {
-    border-color: #2c8b8b;
-    box-shadow: 0 0 0 0.2rem rgba(44, 139, 139, 0.15);
+    border-color: #17a2b8;
+    box-shadow: 0 0 0 0.2rem rgba(23, 162, 184, 0.15);
 }
 
 textarea.form-control {
@@ -98,40 +106,131 @@ textarea.form-control {
 }
 
 .btn-submit {
-    background: linear-gradient(135deg, #2c8b8b 0%, #1a6b6b 100%);
+    background: var(--green-font);
     color: white;
     border: none;
+    padding: 12px 40px;
     border-radius: 8px;
-    padding: 14px 40px;
-    font-size: 1rem;
     font-weight: 600;
-    display: inline-flex;
-    align-items: center;
-    gap: 10px;
-    transition: transform 0.2s, box-shadow 0.2s;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
 }
 
 .btn-submit:hover {
+    background: #138496;
     transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(44, 139, 139, 0.3);
-    background: linear-gradient(135deg, #1a6b6b 0%, #2c8b8b 100%);
+    box-shadow: 0 4px 12px rgba(23, 162, 184, 0.3);
 }
 
-.btn-submit svg {
-    width: 18px;
-    height: 18px;
+.btn-submit i {
+    margin-left: 8px;
 }
 
-@media (max-width: 991px) {
-    .contact-heading {
+/* -------------------START -------MAP CSS----------- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.map-section {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0px 0px 20px 0px;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.section-title h2 {
+    font-size: 2.5rem;
+    color: #2c3e50;
+    margin-bottom: 10px;
+}
+
+.section-title p {
+    font-size: 1.1rem;
+    color: #6c757d;
+}
+
+.map-container {
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    margin-bottom: 30px;
+}
+
+.map-wrapper {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+}
+
+.map-wrapper iframe {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+.btn-directions {
+    display: inline-block;
+    margin-top: 30px;
+    padding: 15px 40px;
+    background: var(--green-font);
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgb(20, 123, 89, 0.3);
+}
+
+.btn-directions:hover {
+    background: rgb(25, 167, 120);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(20, 123, 89, 0.4);
+}
+
+.text-center {
+    text-align: center;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .section-title h2 {
         font-size: 2rem;
     }
 
-    .form-heading {
-        font-size: 1.7rem;
-    }
-
-    .form-section {
-        padding: 30px 20px;
+    .map-wrapper {
+        padding-bottom: 75%;
     }
 }
+
+@media (max-width: 480px) {
+    body {
+        padding: 20px 10px;
+    }
+
+    .section-title h2 {
+        font-size: 1.75rem;
+    }
+
+    .section-title p {
+        font-size: 1rem;
+    }
+
+    .btn-directions {
+        padding: 12px 30px;
+        font-size: 1rem;
+    }
+}
+
+/* -------------------END----------MAP CSS----------- */
