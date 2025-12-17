@@ -859,7 +859,7 @@ body {
 }
 
 .parallax {
-  background-image: url('/images/other_images/reception.jpg');
+  background-image: url('/images/other_images/mask_zoom.jpg');
   height: 800px;
   background-attachment: fixed;
   background-position: center;
@@ -1230,3 +1230,5 @@ body {
     font-size: 0.8rem;
   }
 }
+//
+
