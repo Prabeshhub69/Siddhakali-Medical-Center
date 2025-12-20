@@ -6,7 +6,7 @@
     --light-blue: #F3F8FF;
     --green-color: #E5FCF7;
     --green-font: #147b59;
-    --button-hover:rgb(25, 167, 120);
+    --button-hover: rgb(25, 167, 120);
 }
 
 /* Basic styling */
@@ -353,6 +353,90 @@ body {
     }
 }
 
+/* ===== SERVICES DROPDOWN ===== */
+.nav-dropdown {
+    position: relative;
+}
+
+.dropdown-toggle-custom {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    cursor: pointer;
+}
+
+.dropdown-arrow {
+    font-size: 0.8rem;
+    transition: transform 0.3s ease;
+}
+
+/* Dropdown box */
+.dropdown-menu-custom {
+    position: absolute;
+    top: 120%;
+    left: 0;
+    min-width: 200px;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(12px);
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+    transition: 0.3s ease;
+    z-index: 3000;
+    padding: 10px 0;
+}
+
+.dropdown-menu-custom a {
+    display: block;
+    padding: 10px 20px;
+    font-size: 1rem;
+    color: black;
+    text-decoration: none;
+    transition: 0.25s;
+}
+
+.dropdown-menu-custom a:hover {
+    background: var(--green-color);
+    color: var(--green-font);
+}
+
+/* Hover open (Desktop) */
+.nav-dropdown:hover .dropdown-menu-custom {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.nav-dropdown:hover .dropdown-arrow {
+    transform: rotate(180deg);
+}
+
+@media screen and (max-width: 1024px) {
+    .dropdown-menu-custom {
+        position: static;
+        opacity: 1;
+        visibility: visible;
+        transform: none;
+        box-shadow: none;
+        background: transparent;
+        padding: 0;
+        display: none;
+    }
+
+
+    .nav-dropdown.active .dropdown-menu-custom {
+        display: block;
+    }
+
+    .dropdown-menu-custom a {
+        padding-left: 35px;
+    }
+}
+
+
+
 /*----START---FOOTER CSS-----------*/
 
 * {
@@ -368,7 +452,8 @@ body {
     background-position: center;
     color: white;
     padding: 80px 0;
-    overflow: hidden; /* needed for overlay */
+    overflow: hidden;
+    /* needed for overlay */
 }
 
 /* GREEN overlay (20,123,89, 0.5) */

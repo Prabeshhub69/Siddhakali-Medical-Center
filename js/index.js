@@ -89,3 +89,15 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     });
 });
+
+//hamburger menu for services in navbar should open for mobile view when clicked because hover doesn't work on mobile.
+const serviceDropdown = document.querySelector(".nav-dropdown > a");
+const navDropdown = document.querySelector(".nav-dropdown");
+
+serviceDropdown.addEventListener("click", (e) => {
+    if (window.innerWidth <= 1024) {
+        e.preventDefault();
+        navDropdown.classList.toggle("active");
+    }
+});
+

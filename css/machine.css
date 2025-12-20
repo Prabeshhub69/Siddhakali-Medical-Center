@@ -17,8 +17,7 @@ body {
 }
 
 .hero-section {
-    background: linear-gradient(rgba(255, 255, 255, 0.85), rgba(255, 255, 255, 0.85)),
-        url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 400"><defs><linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:%23e0e7ff;stop-opacity:1" /><stop offset="100%" style="stop-color:%23f0f4ff;stop-opacity:1" /></linearGradient></defs><rect fill="url(%23bg)" width="1200" height="400"/><circle cx="900" cy="100" r="150" fill="%23d1d9ff" opacity="0.3"/><circle cx="300" cy="300" r="100" fill="%23c7d2fe" opacity="0.4"/></svg>');
+    background: url('/images/other_images/heart-line.png');
     background-size: cover;
     background-position: center;
     padding: 80px 0;
@@ -26,11 +25,26 @@ body {
     border-bottom: 1px solid #e5e7eb;
 }
 
+.hero-section::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: url('/images/other_images/heart-line.png') center/cover no-repeat;
+    filter: blur(2.5px);
+    transform: scale(1.05); 
+    z-index: 0;
+}
+
+.hero-section > * {
+    position: relative;
+    z-index: 1;
+}
+
 .hero-title {
     font-size: 3rem;
-    font-weight: 300;
+    font-weight: bold;
     letter-spacing: 8px;
-    color: #1f2937;
+    color: white;
     text-align: center;
     margin: 0;
     text-transform: uppercase;
@@ -71,6 +85,7 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    width: 90%;
 }
 
 .equipment-title {
@@ -85,6 +100,7 @@ body {
     line-height: 1.8;
     font-size: 0.95rem;
 }
+
 
 @media (max-width: 768px) {
     .hero-title {
