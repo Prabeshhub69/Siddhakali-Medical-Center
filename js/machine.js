@@ -1,21 +1,25 @@
-// Intersection Observer for scroll animations
-// const observerOptions = {
-//     threshold: 0.15,
-//     rootMargin: '0px 0px -50px 0px'
-// };
+initScrollAnimations(); // 👈 CALL IT DIRECTLY
 
-// const observer = new IntersectionObserver((entries) => {
-//     entries.forEach((entry, index) => {
-//         if (entry.isIntersecting) {
-//             setTimeout(() => {
-//                 entry.target.classList.add('animate');
-//             }, index * 200);
-//         }
-//     });
-// }, observerOptions);
+function initScrollAnimations() {
+    const items = document.querySelectorAll(".equipment-item");
 
-// // Observe all equipment items
-// document.addEventListener('DOMContentLoaded', () => {
-//     const items = document.querySelectorAll('.equipment-item');
-//     items.forEach(item => observer.observe(item));
-// });
+    if (!items.length) return;
+
+    const observer = new IntersectionObserver(
+        entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add("show");
+                    observer.unobserve(entry.target);
+                }
+            });
+        },
+        { threshold: 0.2 }
+    );
+
+    items.forEach(item => observer.observe(item));
+    items.forEach((item, index) => {
+        item.style.transitionDelay = `${index * 0.1}s`;
+    observer.observe(item);
+});
+}

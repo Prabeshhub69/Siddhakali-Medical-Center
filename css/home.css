@@ -27,18 +27,20 @@ html {
 
 .container {
   max-width: 1450px;
+  padding: 0 15px;
 }
 
 .hero-section {
-  /* background-color: var(--green-color); */
-  height: 625px;
+  min-height: 625px;
   border-radius: 20px;
+  padding: 20px 0;
 }
 
 .hero-section .row {
   display: flex;
   gap: 20px;
   height: 100%;
+  flex-wrap: wrap;
 }
 
 .hero-text {
@@ -46,11 +48,11 @@ html {
   flex-direction: column;
   justify-content: center;
   gap: 20px;
-  width: 600px;
-  padding-left: 20px;
+  padding: 20px;
   border-radius: 10px;
   position: relative;
-  flex: 1 0 auto;
+  flex: 1 1 500px;
+  min-width: 300px;
 }
 
 .main-texts {
@@ -60,12 +62,12 @@ html {
 }
 
 .hero-image {
-  width: 600px;
-  height: 620px;
   background: #f6f6f6;
   border-radius: 10px;
   position: relative;
-  flex: 1 0 auto;
+  flex: 1 1 500px;
+  min-width: 300px;
+  min-height: 400px;
   overflow: hidden;
 }
 
@@ -104,41 +106,52 @@ html {
 .hero-section .heart p {
   margin: 0;
   color: #147b59;
+  font-size: clamp(0.9rem, 2vw, 1rem);
 }
 
 .hero-text h1 {
-  font-size: 3em;
+  font-size: clamp(2rem, 5vw, 3em);
   font-weight: bold;
   color: black;
+  line-height: 1.2;
 }
 
 .medical-word {
   color: black;
-  /* text-decoration: underline; */
 }
 
 .hero-text .paragraph1 {
-  font-size: 1.1em;
-  width: 90%;
+  font-size: clamp(1rem, 2vw, 1.1em);
+  width: 100%;
+  max-width: 90%;
   color: var(--paragraph-color);
   text-align: left;
 }
 
 .hero-text .hero-buttons {
   display: flex;
-  gap: 20px;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.hero-text .button-contact,
+.hero-text .button-appointment {
+  min-width: 180px;
+  max-width: 210px;
+  flex: 1 1 180px;
+  height: 50px;
+  border-radius: 50px;
+  font-size: clamp(0.95rem, 2vw, 1.1rem);
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  white-space: nowrap;
+  padding: 0 15px;
 }
 
 .hero-text .button-contact {
-  width: 210px;
-  height: 50px;
   background-color: white;
   color: var(--green-font);
   border: 2px solid var(--green-font);
-  border-radius: 50px;
-  font-size: 1.1rem;
-  cursor: pointer;
-  transition: transform 0.3s ease;
 }
 
 .hero-text .button-contact:hover {
@@ -148,15 +161,9 @@ html {
 }
 
 .hero-text .button-appointment {
-  width: 210px;
-  height: 50px;
   background-color: var(--green-font);
   color: var(--green-color);
   border: none;
-  border-radius: 50px;
-  font-size: 1.1rem;
-  cursor: pointer;
-  transition: transform 0.3s ease;
 }
 
 .hero-text .button-appointment:hover {
@@ -174,6 +181,171 @@ html {
   transition: margin-left 0.3s ease;
 }
 
+/* Tablet Landscape (992px - 1199px) */
+@media (max-width: 1199px) {
+  .container {
+    max-width: 960px;
+  }
+
+  .hero-section {
+    min-height: 550px;
+  }
+
+  .hero-image {
+    min-height: 380px;
+  }
+}
+
+/* Tablet Portrait (768px - 991px) */
+@media (max-width: 991px) {
+  .container {
+    max-width: 720px;
+  }
+
+  .hero-section {
+    min-height: auto;
+  }
+
+  .hero-section .row {
+    gap: 30px;
+  }
+
+  .hero-text {
+    flex: 1 1 100%;
+    padding: 30px 20px;
+    text-align: center;
+    align-items: center;
+  }
+
+  .hero-image {
+    flex: 1 1 100%;
+    min-height: 400px;
+    order: -1;
+  }
+
+  .main-texts {
+    align-items: center;
+  }
+
+  .hero-text .paragraph1 {
+    text-align: center;
+    max-width: 100%;
+  }
+
+  .hero-text .hero-buttons {
+    justify-content: center;
+  }
+}
+
+/* Mobile Large (576px - 767px) */
+@media (max-width: 767px) {
+  .container {
+    max-width: 540px;
+  }
+
+  .hero-section {
+    border-radius: 15px;
+    padding: 15px 0;
+  }
+
+  .hero-text {
+    gap: 15px;
+    padding: 20px 15px;
+  }
+
+  .hero-image {
+    min-height: 350px;
+    border-radius: 8px;
+  }
+
+  .hero-text .hero-buttons {
+    gap: 12px;
+  }
+
+  .hero-text .button-contact,
+  .hero-text .button-appointment {
+    height: 48px;
+  }
+}
+
+/* Mobile Medium (481px - 575px) */
+@media (max-width: 575px) {
+  .container {
+    padding: 0 12px;
+  }
+
+  .hero-section .row {
+    gap: 20px;
+  }
+
+  .hero-text {
+    padding: 15px 10px;
+  }
+
+  .hero-image {
+    min-height: 300px;
+  }
+
+  .hero-text .hero-buttons {
+    width: 100%;
+  }
+
+  .hero-text .button-contact,
+  .hero-text .button-appointment {
+    flex: 1 1 100%;
+    max-width: 100%;
+    min-width: 100%;
+  }
+}
+
+/* Mobile Small (320px - 480px) */
+@media (max-width: 480px) {
+  .hero-section {
+    border-radius: 10px;
+  }
+
+  .hero-text h1 {
+    font-size: clamp(1.75rem, 6vw, 2.5rem);
+  }
+
+  .hero-section .heart p {
+    font-size: 0.85rem;
+  }
+
+  .hero-image {
+    min-height: 280px;
+    border-radius: 8px;
+  }
+
+  .main-texts {
+    gap: 10px;
+  }
+
+  .hero-text .button-contact,
+  .hero-text .button-appointment {
+    height: 46px;
+    font-size: 0.95rem;
+  }
+}
+
+/* Extra Small Mobile (below 375px) */
+@media (max-width: 374px) {
+  .hero-text h1 {
+    font-size: 1.6rem;
+  }
+
+  .hero-section .heart {
+    gap: 8px;
+  }
+
+  .hero-section .heart p {
+    font-size: 0.8rem;
+  }
+
+  .hero-image {
+    min-height: 250px;
+  }
+}
 
 /*--------END------------------Hero Section CSS-------------------------------------*/
 
@@ -244,17 +416,23 @@ html {
 /*--------END-----Countries Section CSS-------------------------------------*/
 
 /*--------START------------------Third Container CSS-------------------------------------*/
+/* Base styles */
 .third-component {
-  padding: 3em 3em 3em 6em;
+  padding: 3em 1.5em;
 }
 
 .experienced {
   display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  max-width: 1400px;
+  margin: 0 auto;
 }
 
 .image-wrapper {
   position: relative;
-  width: 650px;
+  width: 100%;
+  max-width: 650px;
 }
 
 .experienced-image {
@@ -292,6 +470,7 @@ html {
   margin: 0;
   color: var(--paragraph-color);
   font-size: .9em;
+  line-height: 1.6;
 }
 
 .phrases {
@@ -312,7 +491,7 @@ html {
   width: 180px;
   background-color: white;
   box-shadow: 3px 7px 12px rgba(0, 0, 0, 0.15);
-  padding: 10px 20px 10px 20px;
+  padding: 10px 20px;
   border-radius: 12px;
 }
 
@@ -327,6 +506,291 @@ html {
   font-size: .8em;
   color: var(--paragraph-color);
   margin: 0;
+  text-align: center;
+}
+
+/* Large Desktop (1920px and above) */
+@media (min-width: 1920px) {
+  .third-component {
+    padding: 4em 6em;
+  }
+
+  .experienced {
+    max-width: 1500px;
+  }
+
+  .image-wrapper {
+    max-width: 750px;
+  }
+
+  .experienced-text {
+    width: 800px;
+    padding: 40px 50px;
+  }
+}
+
+/* Desktop (1200px - 1919px) */
+@media (max-width: 1919px) and (min-width: 1200px) {
+  .third-component {
+    padding: 3em 3em;
+  }
+
+  .experienced {
+    max-width: 1300px;
+  }
+}
+
+/* Laptop/Small Desktop (992px - 1199px) */
+@media (max-width: 1199px) and (min-width: 992px) {
+  .third-component {
+    padding: 2.5em 2.5em;
+  }
+
+  .experienced {
+    max-width: 1100px;
+  }
+
+  .image-wrapper {
+    max-width: 550px;
+  }
+
+  .experienced-image {
+    height: 450px;
+  }
+
+  .experienced-text {
+    width: 620px;
+    padding: 30px 35px;
+    left: 85%;
+  }
+
+  .experienced-text h4 {
+    font-size: 1.6em;
+  }
+
+  .phrases {
+    gap: 40px;
+    left: 85%;
+    top: 65%;
+  }
+
+  .phrases .catchy {
+    width: 160px;
+    padding: 8px 15px;
+  }
+
+  .phrases .years {
+    font-size: 1.6em;
+  }
+}
+
+/* Tablet (768px - 991px) */
+@media (max-width: 991px) and (min-width: 768px) {
+  .third-component {
+    padding: 2em;
+  }
+
+  .image-wrapper {
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .experienced-image {
+    height: 400px;
+    width: 100%;
+  }
+
+  .experienced-text {
+    position: static;
+    transform: none;
+    width: 100%;
+    margin-top: 20px;
+    padding: 25px 30px;
+  }
+
+  .experienced-text h4 {
+    font-size: 1.5em;
+  }
+
+  .phrases {
+    position: static;
+    transform: none;
+    width: 100%;
+    margin-top: 20px;
+    gap: 30px;
+    padding: 0;
+    flex-wrap: wrap;
+  }
+
+  .phrases .catchy {
+    width: 150px;
+    padding: 10px 15px;
+  }
+
+  .phrases .years {
+    font-size: 1.5em;
+  }
+
+  .phrases .experience {
+    font-size: .75em;
+  }
+}
+
+/* Mobile Large (576px - 767px) */
+@media (max-width: 767px) and (min-width: 576px) {
+  .third-component {
+    padding: 1.5em;
+  }
+
+  .image-wrapper {
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .experienced-image {
+    height: 350px;
+    width: 100%;
+  }
+
+  .experienced-text {
+    position: static;
+    transform: none;
+    width: 100%;
+    margin-top: 20px;
+    padding: 20px 25px;
+  }
+
+  .experienced-text h4 {
+    font-size: 1.4em;
+  }
+
+  .experienced-text p {
+    font-size: .85em;
+  }
+
+  .phrases {
+    position: static;
+    transform: none;
+    width: 100%;
+    margin-top: 20px;
+    gap: 15px;
+    padding: 0;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+
+  .phrases .catchy {
+    width: 140px;
+    padding: 12px 15px;
+  }
+
+  .phrases .years {
+    font-size: 1.4em;
+  }
+
+  .phrases .experience {
+    font-size: .7em;
+  }
+}
+
+/* Mobile Small (less than 576px) */
+@media (max-width: 575px) {
+  .third-component {
+    padding: 1em;
+  }
+
+  .image-wrapper {
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .experienced-image {
+    height: 300px;
+    width: 100%;
+  }
+
+  .experienced-text {
+    position: static;
+    transform: none;
+    width: 100%;
+    margin-top: 15px;
+    padding: 20px;
+  }
+
+  .experienced-text h4 {
+    font-size: 1.3em;
+  }
+
+  .experienced-text p {
+    font-size: .85em;
+  }
+
+  .phrases {
+    position: static;
+    transform: none;
+    width: 100%;
+    margin-top: 15px;
+    gap: 12px;
+    padding: 0;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .phrases .catchy {
+    width: 100%;
+    max-width: 280px;
+    padding: 15px 20px;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .phrases .years {
+    font-size: 1.6em;
+  }
+
+  .phrases .experience {
+    font-size: .8em;
+    text-align: left;
+  }
+}
+
+/* Mobile Extra Small (less than 400px) */
+@media (max-width: 399px) {
+  .third-component {
+    padding: 1em 0.5em;
+  }
+
+  .experienced-image {
+    height: 250px;
+  }
+
+  .experienced-text {
+    padding: 15px;
+  }
+
+  .experienced-text h4 {
+    font-size: 1.2em;
+  }
+
+  .experienced-text p {
+    font-size: .8em;
+  }
+
+  .phrases .catchy {
+    padding: 12px 15px;
+  }
+
+  .phrases .years {
+    font-size: 1.4em;
+  }
+
+  .phrases .experience {
+    font-size: .75em;
+  }
 }
 
 /*--------END------------------Third Container CSS-------------------------------------*/
@@ -575,7 +1039,7 @@ body {
 
 .machine-container {
   background-color: var(--grey-theme);
-  padding: 30px;
+  padding: 30px 15px;
 }
 
 .machines {
@@ -589,9 +1053,10 @@ body {
 
 .machines .cards {
   display: flex;
-  align-items: center;
+  align-items: stretch;
   gap: 25px;
   width: 70%;
+  flex-wrap: wrap;
 }
 
 .machine--1 .machine__img,
@@ -653,7 +1118,8 @@ body {
 .machine {
   transition: all .4s cubic-bezier(0.175, 0.885, 0, 1);
   background-color: #fff;
-  width: 25%;
+  width: 22%;
+  min-width: 200px;
   height: auto;
   position: relative;
   border-radius: 12px;
@@ -734,11 +1200,14 @@ body {
 .machines-header h5 {
   font-family: "Ubuntu", sans-serif;
   font-size: 1.8em;
+  margin-bottom: 15px;
 }
 
 .machines-header p {
   font-family: "Ubuntu", sans-serif;
   font-size: 0.9em;
+  margin-bottom: 20px;
+  line-height: 1.5;
 }
 
 .interactive-button {
@@ -836,6 +1305,201 @@ body {
   font-size: 24px;
   font-weight: 700;
   color: #1f2937;
+}
+
+/* ============================================
+   RESPONSIVE BREAKPOINTS
+   ============================================ */
+
+/* Large Tablets and Small Desktops (992px - 1199px) */
+@media (max-width: 1199px) {
+  .machines {
+    gap: 20px;
+  }
+
+  .machines .cards {
+    width: 75%;
+    gap: 20px;
+  }
+
+  .machine {
+    width: calc(50% - 10px);
+  }
+
+  .machines-header h5 {
+    font-size: 1.6em;
+  }
+}
+
+/* Tablets (768px - 991px) */
+@media (max-width: 991px) {
+  .machine-container {
+    padding: 25px 15px;
+  }
+
+  .machines {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .machines-header {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+
+  .machines .cards {
+    width: 100%;
+    justify-content: center;
+    gap: 20px;
+  }
+
+  .machine {
+    width: calc(50% - 10px);
+    max-width: 300px;
+  }
+
+  .machines-header h5 {
+    font-size: 1.8em;
+  }
+
+  .machines-header p {
+    font-size: 1em;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+/* Small Tablets and Large Phones (576px - 767px) */
+@media (max-width: 767px) {
+  .machine-container {
+    padding: 20px 10px;
+  }
+
+  .machines .cards {
+    gap: 15px;
+  }
+
+  .machine {
+    width: calc(50% - 7.5px);
+    min-width: 150px;
+  }
+
+  .machine__img,
+  .machine__img--hover {
+    height: 150px;
+  }
+
+  .machine__title {
+    font-size: 1em;
+  }
+
+  .machine__info {
+    padding: 12px 15px 15px 15px;
+  }
+
+  .view-more-btn button {
+    padding: 4px 8px;
+    font-size: 0.85rem;
+  }
+
+  .machines-header h5 {
+    font-size: 1.5em;
+  }
+
+  .machines-header p {
+    font-size: 0.9em;
+  }
+
+  .interactive-button {
+    width: 140px;
+    font-size: 13px;
+  }
+}
+
+/* Mobile Phones (up to 575px) */
+@media (max-width: 575px) {
+  .machine-container {
+    padding: 15px 10px;
+  }
+
+  .machines {
+    gap: 20px;
+  }
+
+  .machines .cards {
+    flex-direction: column;
+    width: 100%;
+    gap: 15px;
+  }
+
+  .machine {
+    width: 100%;
+    max-width: 100%;
+    min-width: unset;
+  }
+
+  .machine__img,
+  .machine__img--hover {
+    height: 200px;
+  }
+
+  .machine__title {
+    font-size: 1.1em;
+  }
+
+  .machines-header h5 {
+    font-size: 1.4em;
+  }
+
+  .machines-header p {
+    font-size: 0.85em;
+  }
+
+  /* Simplify hover effects on mobile */
+  .machine:hover {
+    transform: scale(1.0, 1.02);
+  }
+}
+
+/* Very Small Phones (up to 375px) */
+@media (max-width: 375px) {
+  .machine-container {
+    padding: 15px 8px;
+  }
+
+  .machine__img,
+  .machine__img--hover {
+    height: 180px;
+  }
+
+  .machine__title {
+    font-size: 1em;
+  }
+
+  .machine__info {
+    padding: 10px 12px 12px 12px;
+  }
+
+  .view-more-btn button {
+    padding: 4px 8px;
+    font-size: 0.8rem;
+  }
+
+  .machines-header h5 {
+    font-size: 1.3em;
+  }
+
+  .machines-header p {
+    font-size: 0.8em;
+  }
+
+  .interactive-button {
+    width: 130px;
+    font-size: 12px;
+    padding: 6px;
+  }
 }
 
 /*-------------END--------------------Machine Card CSS-----------------------------------*/
@@ -1230,5 +1894,3 @@ body {
     font-size: 0.8rem;
   }
 }
-
-
