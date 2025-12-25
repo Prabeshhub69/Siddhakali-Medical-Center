@@ -1,0 +1,204 @@
+ :root {
+     --green-accent: #147b59;
+     --sage-bg: #c8d5c8;
+     --cream-bg: #f5f5f0;
+ }
+
+ * {
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+ }
+
+ body {
+     font-family: 'Georgia', serif;
+     background: var(--cream-bg);
+     color: #1a1a1a;
+     min-height: 100vh;
+ }
+
+ .container-fluid {
+     padding: 0;
+ }
+
+ .main-wrapper {
+     display: flex;
+     min-height: 100vh;
+ }
+
+ .left-section {
+     background: white;
+     padding: 60px 50px;
+     flex: 1;
+     max-width: 600px;
+ }
+
+ .right-section {
+     background: var(--sage-bg);
+     flex: 1;
+     position: relative;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     padding: 60px;
+ }
+
+
+
+ .founder-name {
+     font-size: 3.5rem;
+     font-weight: 400;
+     margin-bottom: 10px;
+     line-height: 1.2;
+     letter-spacing: -0.5px;
+ }
+
+ .founder-title {
+     font-size: 1.1rem;
+     color: #666;
+     margin-bottom: 50px;
+     font-family: 'Segoe UI', sans-serif;
+     letter-spacing: 0.5px;
+ }
+
+ .section-heading {
+     font-size: 0.85rem;
+     letter-spacing: 3px;
+     text-transform: uppercase;
+     margin-bottom: 25px;
+     font-weight: 600;
+     color: #1a1a1a;
+     position: relative;
+     padding-bottom: 15px;
+     font-family: 'Segoe UI', sans-serif;
+ }
+
+ .section-heading::after {
+     content: '';
+     position: absolute;
+     left: 0;
+     bottom: 0;
+     width: 60px;
+     height: 2px;
+     background: #1a1a1a;
+ }
+
+ .about-text {
+     font-size: 1rem;
+     line-height: 1.8;
+     color: #2d2d2d;
+     margin-bottom: 35px;
+ }
+
+ .profile-image-container {
+     position: relative;
+     width: 100%;
+     max-width: 400px;
+ }
+
+ .profile-image {
+     width: 100%;
+     height: auto;
+     display: block;
+ }
+
+ .stats-container {
+     display: grid;
+     grid-template-columns: repeat(3, 1fr);
+     gap: 30px;
+     margin-top: 50px;
+     padding-top: 40px;
+     border-top: 1px solid #e0e0e0;
+ }
+
+ .stat-item {
+     text-align: left;
+ }
+
+ .stat-number {
+     font-size: 2.5rem;
+     font-weight: 400;
+     color: var(--green-accent);
+     margin-bottom: 8px;
+     line-height: 1;
+ }
+
+ .stat-label {
+     font-size: 0.85rem;
+     color: #666;
+     font-family: 'Segoe UI', sans-serif;
+     letter-spacing: 0.5px;
+ }
+
+ .focus-areas {
+     margin-top: 50px;
+ }
+
+ .focus-list {
+     list-style: none;
+     padding: 0;
+ }
+
+ .focus-item {
+     padding: 15px 0;
+     border-bottom: 1px solid #e8e8e8;
+     font-size: 1rem;
+     color: #2d2d2d;
+     transition: all 0.3s ease;
+ }
+
+ .focus-item:hover {
+     color: var(--green-accent);
+     padding-left: 10px;
+ }
+
+ .focus-item:last-child {
+     border-bottom: none;
+ }
+
+ @media (max-width: 992px) {
+     .main-wrapper {
+         flex-direction: column;
+     }
+
+     .left-section {
+         max-width: 100%;
+         padding: 40px 30px;
+     }
+
+     .right-section {
+         padding: 40px 30px;
+         min-height: 500px;
+     }
+
+
+ }
+
+ @media (max-width: 768px) {
+     .founder-name {
+         font-size: 2.5rem;
+     }
+
+     .stats-container {
+         grid-template-columns: 1fr;
+         gap: 25px;
+     }
+
+     .left-section {
+         padding: 30px 20px;
+     }
+
+     .right-section {
+         padding: 30px 20px;
+     }
+ }
+
+ @media (max-width: 480px) {
+     .founder-name {
+         font-size: 2rem;
+     }
+
+     .about-text {
+         font-size: 0.95rem;
+     }
+ }
