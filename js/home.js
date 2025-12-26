@@ -41,19 +41,19 @@ window.addEventListener("scroll", function () {
 
 //acccordion js
 document.querySelectorAll(".faq-question").forEach(button => {
-        button.addEventListener("click", () => {
-            const faqItem = button.parentElement;
+    button.addEventListener("click", () => {
+        const faqItem = button.parentElement;
 
             // Close others
-            document.querySelectorAll(".faq-item").forEach(item => {
-                if (item !== faqItem) {
-                    item.classList.remove("active");
-                }
-            });
-
-            // Toggle current
-            faqItem.classList.toggle("active");
+        document.querySelectorAll(".faq-item").forEach(item => {
+            if (item !== faqItem) {
+                item.classList.remove("active");
+            }
         });
+
+        // Toggle current
+        faqItem.classList.toggle("active");
+    });
 });
 
 
