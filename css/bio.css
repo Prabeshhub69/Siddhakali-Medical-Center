@@ -2,6 +2,13 @@
      --green-accent: #147b59;
      --sage-bg: #c8d5c8;
      --cream-bg: #f5f5f0;
+     --catchy-color: #2563EB;
+     --catchy-hover: #1E40AF;
+     --grey-theme: #fcfcfc;
+     --paragraph-color: rgb(64, 64, 64);
+     --light-blue: #F3F8FF;
+     --green-color: #E5FCF7;
+     --green-font: #147b59;
  }
 
  * {
@@ -39,9 +46,8 @@
      display: flex;
      flex-direction: column;
      align-items: center;
-     justify-content: center;
-     gap: 100px;
      padding: 60px;
+     gap: 150px;
  }
 
  .founder-name {
@@ -158,10 +164,19 @@
  .quote-section {
      background: var(--secondary-bg);
      padding: 50px;
-     border-radius: 20px;
      border-left: 6px solid var(--green-accent);
      margin: 40px 0;
      position: relative;
+     display: flex;
+     flex-direction: column;
+     text-align: center;
+ }
+
+ .quote-section p {
+     font-size: 1.2rem;
+     font-style: italic;
+     line-height: 1.6;
+     color: var(--paragraph-color);
  }
 
  @media (max-width: 992px) {
