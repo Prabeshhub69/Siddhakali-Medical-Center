@@ -69,7 +69,7 @@ body {
 
 .event-img {
     width: 330px;
-    height: 300px;
+    height: 400px;
     object-fit: cover;
     border-radius: 12px;
     box-shadow: 0 4px 12px rgba(0,0,0,0.2);
@@ -359,7 +359,7 @@ body {
 
     .event-img {
         width: 269px;
-        height: 300px;
+        height: 400px;
     }
 
     .event-info h2 {

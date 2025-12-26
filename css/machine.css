@@ -140,7 +140,7 @@ body {
 .js .equipment-item {
     opacity: 0;
     transform: translateY(40px);
-    transition: opacity 0.8s ease, transform 0.8s ease; /* Only here */
+    transition: opacity 0.4s ease, transform 0.8s ease; /* Only here */
 }
 
 /* Visible state */
