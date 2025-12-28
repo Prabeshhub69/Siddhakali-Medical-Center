@@ -413,6 +413,7 @@ body {
     transform: rotate(180deg);
 }
 
+/* ===== MOBILE STYLES ===== */
 @media screen and (max-width: 1024px) {
     .dropdown-menu-custom {
         position: static;
@@ -425,16 +426,20 @@ body {
         display: none;
     }
 
-
+    /* Show dropdown when active */
     .nav-dropdown.active .dropdown-menu-custom {
         display: block;
+    }
+
+    /* Rotate arrow when active */
+    .nav-dropdown.active .dropdown-arrow {
+        transform: rotate(180deg);
     }
 
     .dropdown-menu-custom a {
         padding-left: 35px;
     }
 }
-
 
 
 /*----START---FOOTER CSS-----------*/

@@ -91,13 +91,35 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 //hamburger menu for services in navbar should open for mobile view when clicked because hover doesn't work on mobile.
-const serviceDropdown = document.querySelector(".nav-dropdown > a");
-const navDropdown = document.querySelector(".nav-dropdown");
+// const serviceDropdown = document.querySelector(".nav-dropdown > a");
+// const navDropdown = document.querySelector(".nav-dropdown");
 
-serviceDropdown.addEventListener("click", (e) => {
-    if (window.innerWidth <= 1024) {
-        e.preventDefault();
-        navDropdown.classList.toggle("active");
-    }
+// serviceDropdown.addEventListener("click", (e) => {
+//     if (window.innerWidth <= 1024) {
+//         e.preventDefault();
+//         navDropdown.classList.toggle("active");
+//     }
+// });
+
+// Select both dropdown toggles
+const dropdownToggles = document.querySelectorAll(".dropdown-toggle-custom");
+
+dropdownToggles.forEach(toggle => {
+    toggle.addEventListener("click", (e) => {
+        if (window.innerWidth <= 1024) {
+            e.preventDefault();
+            const parentDropdown = toggle.closest(".nav-dropdown");
+            
+            // Close other dropdowns
+            document.querySelectorAll(".nav-dropdown").forEach(dropdown => {
+                if (dropdown !== parentDropdown) {
+                    dropdown.classList.remove("active");
+                }
+            });
+            
+            // Toggle current dropdown
+            parentDropdown.classList.toggle("active");
+        }
+    });
 });
 

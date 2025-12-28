@@ -62,7 +62,7 @@ html {
 }
 
 .hero-image {
-  background: #f6f6f6;
+  background: #ffffff;
   border-radius: 10px;
   position: relative;
   flex: 1 1 500px;
@@ -73,9 +73,10 @@ html {
 
 .hero-image img {
   width: 100%;
-  height: 100%;
+  height: 85%;
   object-fit: cover;
   display: block;
+  border-radius: 10px;
 }
 
 .hero-section .heart {
@@ -1505,31 +1506,13 @@ body {
 /*-------------END--------------------Machine Card CSS-----------------------------------*/
 
 
-/*--------Start------Features CSS-------------------------------------*/
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-
-  min-height: 100vh;
-}
-
-.features {
-  background-color: var(--grey-theme);
-}
-
+/*--------Start------Parallax CSS-------------------------------------*/
 .parallax {
-  background-image: url('/images/other_images/mask_zoom.jpg');
-  height: 800px;
-  background-attachment: fixed;
-  background-position: center;
+  background-image: url('/images/other_images/reception.jpg');
+  height: 600px;
+  background-position: bottom;
   background-repeat: no-repeat;
   background-size: cover;
-
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1552,203 +1535,9 @@ body {
 .btn:hover {
   background: rgba(0, 0, 0, 0.8);
 }
-
-.features-container {
-  max-width: 1445px;
-  margin: 0 auto;
-  padding: 40px 20px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 25px;
-}
-
-.features-grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  position: relative;
-  z-index: 10;
-}
-
-.features-container h3 {
-  font-weight: bold;
-}
-
-@media (min-width: 768px) {
-  .features-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (min-width: 1024px) {
-  .features-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-.feature {
-  position: relative;
-  padding: 40px 0;
-  border-right: 1px solid #e5e7eb;
-  border-bottom: 1px solid #e5e7eb;
-}
-
-/* first column on large screens */
-.feature:nth-child(1),
-.feature:nth-child(5) {
-  border-left: 1px solid #e5e7eb;
-}
-
-/* bottom row remove border */
-@media (min-width: 1024px) {
-
-  .feature:nth-child(5),
-  .feature:nth-child(6),
-  .feature:nth-child(7),
-  .feature:nth-child(8) {
-    border-bottom: none;
-  }
-}
-
-/* last column remove right border */
-@media (min-width: 1024px) {
-
-  .feature:nth-child(4),
-  .feature:nth-child(8) {
-    border-right: none;
-  }
-}
-
-/* Gradients */
-.feature-gradient-top,
-.feature-gradient-bottom {
-  position: absolute;
-  inset: 0;
-  height: 100%;
-  width: 100%;
-  opacity: 0;
-  transition: opacity 0.2s ease;
-  pointer-events: none;
-}
-
-.feature-gradient-top {
-  background: linear-gradient(to top, #f3f4f6, transparent);
-}
-
-.feature-gradient-bottom {
-  background: linear-gradient(to bottom, #f3f4f6, transparent);
-}
-
-.feature:hover .feature-gradient-top,
-.feature:hover .feature-gradient-bottom {
-  opacity: 1;
-}
-
-.feature-icon {
-  margin-bottom: 16px;
-  position: relative;
-  z-index: 10;
-  padding: 0 40px;
-  color: #6b7280;
-}
-
-.feature-icon svg {
-  width: 32px;
-  height: 32px;
-  stroke: var(--green-font);
-  stroke-width: 2;
-  fill: none;
-}
-
-.feature-title-wrapper {
-  position: relative;
-  z-index: 10;
-  padding: 0 40px;
-  margin-bottom: 8px;
-}
-
-.feature-bar {
-  position: absolute;
-  left: 0;
-  top: 0;
-  bottom: 0;
-  width: 4px;
-  height: 24px;
-  background: #d1d5db;
-  border-radius: 0 9999px 9999px 0;
-  transition: all 0.2s ease;
-  transform-origin: center;
-}
-
-.feature:hover .feature-bar {
-  height: 32px;
-  background: #3b82f6;
-}
-
-.feature-title {
-  font-size: 18px;
-  font-weight: 700;
-  color: #1f2937;
-  display: inline-block;
-  transition: transform 0.2s ease;
-}
-
-.feature:hover .feature-title {
-  transform: translateX(8px);
-}
-
-.feature-description {
-  font-size: 0.9em;
-  color: #6b7280;
-  max-width: 320px;
-  position: relative;
-  z-index: 10;
-  padding: 0 40px;
-  line-height: 1.5;
-}
-
-/* Dark Mode */
-@media (prefers-color-scheme: dark) {
-  body {
-    background: white;
-    color: black;
-  }
-
-  .feature {
-    border-color: #1e293b;
-  }
-
-  .feature-gradient-top {
-    background: linear-gradient(to top, var(--green-color), transparent);
-  }
-
-  .feature-gradient-bottom {
-    background: linear-gradient(to bottom, var(--green-color), transparent);
-  }
-
-  .feature-icon {
-    color: #94a3b8;
-  }
-
-  .feature-bar {
-    background: #475569;
-  }
-
-  .feature-title {
-    color: black;
-  }
-
-  .feature-description {
-    color: var(--paragraph-color);
-  }
-}
-
-/*--------End------Features CSS-------------------------------------*/
-
+/*--------End------Parallax CSS-------------------------------------*/
+/*======================================================================================*/
 /*--------Start------Testimonial CSS-------------------------------------*/
-
-/* CONTAINER */
 
 .testimonial-main {
   display: flex;
@@ -1893,60 +1682,4 @@ body {
   .role {
     font-size: 0.8rem;
   }
-}
-
-.faq-section {
-  max-width: 1400px;
-  margin: 60px auto;
-  padding: 0 20px;
-}
-
-.faq-title {
-  text-align: center;
-  margin-bottom: 30px;
-  font-size: 32px;
-  font-weight: 600;
-}
-
-.faq-item {
-  border-bottom: 1px solid #e5e7eb;
-}
-
-.faq-question {
-  width: 100%;
-  background: none;
-  border: none;
-  padding: 18px 0;
-  font-size: 18px;
-  font-weight: 500;
-  text-align: left;
-  cursor: pointer;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.faq-question .icon {
-  font-size: 22px;
-  transition: transform 0.3s ease;
-}
-
-.faq-answer {
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.3s ease;
-}
-
-.faq-answer p {
-  padding: 0 0 18px 0;
-  color: #555;
-  line-height: 1.6;
-}
-
-.faq-item.active .faq-answer {
-  max-height: 300px;
-}
-
-.faq-item.active .icon {
-  transform: rotate(45deg);
 }

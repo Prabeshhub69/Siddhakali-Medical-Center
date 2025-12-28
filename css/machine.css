@@ -10,6 +10,7 @@
 }
 
 body {
+    overflow-x: hidden;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background: #fff;
     margin: 0;
@@ -17,10 +18,11 @@ body {
 }
 
 .hero-section {
-    background: url('/images/other_images/heart-line.png');
+    /* background: url('/images/other_images/heart-line.png'); */
+    background-image: url("/images/other_images/mask.png");
     background-size: cover;
     background-position: center;
-    padding: 80px 0;
+    padding: 100px 0;
     position: relative;
     border-bottom: 1px solid #e5e7eb;
 }
@@ -29,8 +31,9 @@ body {
     content: "";
     position: absolute;
     inset: 0;
-    background: url('/images/other_images/heart-line.png') center/cover no-repeat;
-    filter: blur(2.5px);
+    /* background: url('/images/other_images/heart-line.png') center/cover no-repeat; */
+    background: url('/images/other_images/mask.png') center/cover no-repeat;
+    filter: blur(1.5px);
     transform: scale(1.05); 
     z-index: 0;
 }
