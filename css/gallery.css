@@ -1,0 +1,146 @@
+ * {
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+ }
+
+ body {
+     font-family: "Ubuntu", sans-serif;
+     color: #ffffff;
+     min-height: 100vh;
+ }
+
+ .container {
+     max-width: 1400px;
+     margin: 0 auto;
+ }
+
+ h1 {
+     color: black;
+     text-align: center;
+     font-size: 2.5rem;
+     margin-bottom: 3rem;
+     font-weight: 700;
+ }
+
+ .masonry-grid {
+     column-count: 1;
+     column-gap: 1rem;
+ }
+
+ .masonry-item {
+     break-inside: avoid;
+     margin-bottom: 1rem;
+     opacity: 0;
+     transform: translateY(20px);
+     animation: fadeInUp 0.6s ease-out forwards;
+ }
+
+ .card {
+     position: relative;
+     border-radius: 1rem;
+     overflow: hidden;
+     transition: transform 0.3s ease;
+     cursor: pointer;
+     background-size: cover;
+     background-position: center;
+     background-repeat: no-repeat;
+ }
+
+ .card::before {
+     content: '';
+     display: block;
+     padding-bottom: 130%;
+ }
+
+ .card:hover {
+     transform: scale(1.05);
+ }
+
+ .card-overlay {
+     position: absolute;
+     inset: 0;
+ }
+
+ .card-content {
+     position: absolute;
+     bottom: 0;
+     left: 0;
+     padding: 1.5rem;
+     color: white;
+ }
+
+ .card-feedback {
+     font-size: 0.95rem;
+     font-weight: 600;
+     line-height: 1.4;
+     text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+ }
+
+ /* Image backgrounds via CSS */
+ .card-1 {
+     background-image: url('/images/other_images/lab.jpg');
+ }
+
+ .card-2 {
+     background-image: url('/images/departments/video-xray.webp');
+ }
+
+ .card-3 {
+     background-image: url('/images/departments/biology-lab.webp');
+ }
+
+ .card-4 {
+     background-image: url('/images/departments/physical-lab.jpg');
+ }
+
+ .card-5 {
+     background-image: url('/images/departments/biology-lab.webp');
+ }
+
+ .card-6 {
+     background-image: url('/images/departments/lab3.webp');
+ }
+
+ .card-7 {
+     background-image: url('/images/departments/x-ray_room.webp');
+ }
+
+ .card-8 {
+     background-image: url('/images/departments/xray3.png');
+ }
+
+ @keyframes fadeInUp {
+     to {
+         opacity: 1;
+         transform: translateY(0);
+     }
+ }
+
+ /* Responsive columns */
+ @media (min-width: 640px) {
+     .masonry-grid {
+         column-count: 2;
+     }
+
+     h1 {
+         font-size: 3rem;
+     }
+ }
+
+ @media (min-width: 1024px) {
+     .masonry-grid {
+         column-count: 3;
+         column-gap: 1.5rem;
+     }
+
+     .masonry-item {
+         margin-bottom: 1.5rem;
+     }
+ }
+
+ @media (min-width: 1280px) {
+     .masonry-grid {
+         column-count: 4;
+     }
+ }
