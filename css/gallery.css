@@ -1,3 +1,14 @@
+ :root {
+     --catchy-color: #2563EB;
+     --catchy-hover: #1E40AF;
+     --grey-theme: #fcfcfc;
+     --paragraph-color: rgb(64, 64, 64);
+     --light-blue: #F3F8FF;
+     --green-color: #E5FCF7;
+     --green-font: #147b59;
+     --button-hover: rgb(25, 167, 120);
+ }
+
  * {
      margin: 0;
      padding: 0;
@@ -22,6 +33,7 @@
      margin-bottom: 3rem;
      font-weight: 700;
  }
+
 
  .masonry-grid {
      column-count: 1;
