@@ -220,9 +220,6 @@ textarea.form-control {
 }
 
 @media (max-width: 480px) {
-    body {
-        padding: 20px 10px;
-    }
 
     .section-title h2 {
         font-size: 1.75rem;
