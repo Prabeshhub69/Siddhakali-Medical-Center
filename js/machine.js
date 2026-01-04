@@ -19,7 +19,7 @@ function initScrollAnimations() {
 
     items.forEach(item => observer.observe(item));
     items.forEach((item, index) => {
-        item.style.transitionDelay = `${index * 0.05}s`;
+        item.style.transitionDelay = `${index * 0.01}s`;
     observer.observe(item);
 });
 }

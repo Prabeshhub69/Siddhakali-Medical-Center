@@ -9,14 +9,14 @@ function initGallery() {
     }
 
     const testimonials = [
-        { feedback: "Kashmir's Hidden Winter Wonderland", cardClass: 'card-1' },
-        { feedback: 'Celebrating Diwali Through The Lens', cardClass: 'card-2' },
-        { feedback: 'A Sunset Symphony in Gold', cardClass: 'card-3' },
-        { feedback: 'realme Insider Event Kashmir', cardClass: 'card-4' },
-        { feedback: 'Illuminate the Night with the P3 Pro', cardClass: 'card-5' },
-        { feedback: 'Highlights from realme', cardClass: 'card-6' },
-        { feedback: '14 Pro Series Launch Event Recap', cardClass: 'card-7' },
-        { feedback: 'The mountains are calling me.', cardClass: 'card-8' }
+        { feedback: "Biological lab", cardClass: 'card-1' },
+        { feedback: 'Our docotr performing video x-ray', cardClass: 'card-2' },
+        { feedback: 'Nurse carefully doing test on HPLC machine', cardClass: 'card-3' },
+        { feedback: 'Physical Lab', cardClass: 'card-4' },
+        { feedback: 'Siddhakali Medical Center', cardClass: 'card-5' },
+        { feedback: 'Blood Grouping', cardClass: 'card-6' },
+        { feedback: 'Inside X-ray room', cardClass: 'card-7' },
+        { feedback: 'Performing X-ray', cardClass: 'card-8' }
     ];
 
     testimonials.forEach((item, index) => {
