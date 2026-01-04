@@ -1507,10 +1507,10 @@ body {
 
 
 /*--------Start------Parallax CSS-------------------------------------*/
-.parallax {
-  background-image: url('/images/other_images/reception.jpg');
+/* .parallax {
+  background-image: url('/images/departments/biometric_room.jpg');
   height: 600px;
-  background-position: bottom;
+  background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   display: flex;
@@ -1521,20 +1521,45 @@ body {
   text-align: center;
 }
 
-.btn {
-  padding: 15px 30px;
-  background: rgba(0, 0, 0, 0.6);
-  color: white;
-  border: none;
-  border-radius: 8px;
-  font-size: 20px;
-  cursor: pointer;
-  transition: 0.3s;
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.35);
+} */
+
+.parallax {
+  position: relative;
+  height: 800px;
+  overflow: hidden;
 }
 
-.btn:hover {
-  background: rgba(0, 0, 0, 0.8);
+/* Image layer */
+.parallax-media {
+  position: absolute;
+  top: -15%;
+  left: 0;
+  width: 100%;
+  height: 150%;
+  background-image: url('/images/other_images/reception.jpg');
+  background-size: cover;
+  background-position: bottom;
+  will-change: transform;
 }
+
+/* Optional overlay */
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.35);
+}
+
+@media (max-width: 430px) {
+    .parallax-media {
+      height: 100%
+    }
+}
+  
+
 /*--------End------Parallax CSS-------------------------------------*/
 /*======================================================================================*/
 /*--------Start------Testimonial CSS-------------------------------------*/
