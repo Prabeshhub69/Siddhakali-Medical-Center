@@ -33,7 +33,15 @@ function loadPage(page) {
     fetch(`html/${page}.html`)
         .then(response => response.text())
         .then(html => {
-            document.getElementById("app").innerHTML = html;
+            const app = document.getElementById("app");
+            app.innerHTML = html;
+
+            // ✅ RESET SCROLL TO TOP
+            window.scrollTo({
+                top: 0,
+                left: 0,
+                behavior: "instant" // or "smooth" if you prefer
+            });
 
             // Load JS after HTML is inserted
             loadJS(page);
@@ -42,6 +50,7 @@ function loadPage(page) {
             document.getElementById("app").innerHTML = "<h2>Page not found</h2>";
         });
 }
+
 
 // Router function
 function router() {
