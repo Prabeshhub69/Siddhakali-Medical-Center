@@ -711,3 +711,7 @@ body {
         font-size: 13px;
     }
 }
+
+#app {
+    transition: opacity 0.2s ease-in-out;
+}

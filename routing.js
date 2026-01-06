@@ -26,28 +26,44 @@ function loadJS(page) {
 
 // Load a specific page into #app
 function loadPage(page) {
-    // Load CSS
-    loadCSS(page);
+    const app = document.getElementById("app");
 
-    // Fetch HTML
-    fetch(`html/${page}.html`)
-        .then(response => response.text())
-        .then(html => {
-            const app = document.getElementById("app");
+    // Create new CSS link
+    const newLink = document.createElement("link");
+    newLink.rel = "stylesheet";
+    newLink.href = `/css/${page}.css`;
+
+    // Load CSS and HTML in parallel
+    Promise.all([
+        new Promise(resolve => {
+            newLink.onload = resolve;
+            document.head.appendChild(newLink);
+        }),
+        fetch(`html/${page}.html`).then(r => r.text())
+    ])
+        .then(([_, html]) => {
+            // Remove old CSS
+            const oldLink = document.getElementById("page-css");
+            if (oldLink) oldLink.remove();
+
+            // Set new CSS ID
+            newLink.id = "page-css";
+
+            // Update content
             app.innerHTML = html;
 
-            // ✅ RESET SCROLL TO TOP
+            // Reset scroll
             window.scrollTo({
                 top: 0,
                 left: 0,
-                behavior: "instant" // or "smooth" if you prefer
+                behavior: "instant"
             });
 
-            // Load JS after HTML is inserted
+            // Load JS
             loadJS(page);
         })
         .catch(() => {
-            document.getElementById("app").innerHTML = "<h2>Page not found</h2>";
+            app.innerHTML = "<h2>Page not found</h2>";
         });
 }
 
