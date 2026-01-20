@@ -1684,7 +1684,7 @@ body {
   }
 
   .cta-button {
-    padding: 12px 30px;
+    padding: 10px 15px;
     width: 100%;
     max-width: 300px;
   }
@@ -1829,9 +1829,6 @@ body {
     margin-bottom: 30px;
   }
 
-  body {
-    padding: 40px 15px;
-  }
 }
 
 /* Large Monitor View */
