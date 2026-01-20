@@ -258,6 +258,7 @@ body {
     .contact {
         position: fixed;
         bottom: 0;
+        top:500px;
         right: -100%;
         width: 280px;
         padding: 20px;
