@@ -271,6 +271,7 @@ body {
 
     .contact.active {
         right: 0;
+        top:500px;
     }
 
     .contact a {
