@@ -1505,63 +1505,210 @@ body {
 
 /*-------------END--------------------Machine Card CSS-----------------------------------*/
 
+/*-------------START--------------------Machine Card CSS-----------------------------------*/
+body {
+  font-family: 'Ubuntu', sans-serif;
+}
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+}
 
-/*--------Start------Parallax CSS-------------------------------------*/
-/* .parallax {
-  background-image: url('/images/departments/biometric_room.jpg');
-  height: 600px;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+.header {
+  text-align: center;
+  color: black;
+  margin-bottom: 40px;
+  padding: 20px;
+}
+
+.header h1 {
+  font-size: clamp(1rem, 5vw, 2rem);
+  font-weight: 700;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.header p {
+  font-size: clamp(1rem, 2.5vw, 1rem);
+  font-style: italic;
+  opacity: 0.95;
+}
+
+.services-wrapper {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-  color: #fff;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  animation: fadeIn 0.8s ease-in;
+}
+
+.service-card {
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.service-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+}
+
+.card-image {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  display: block;
+}
+
+.card-content {
+  padding: 70px 20px;
   text-align: center;
 }
 
-.overlay {
-  position: absolute;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.35);
-} */
-
-.parallax {
-  position: relative;
-  height: 800px;
-  overflow: hidden;
+.icon-wrapper {
+  width: 80px;
+  height: 80px;
+  background: var(--green-color);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 20px;
+  transition: background 0.3s ease;
 }
 
-/* Image layer */
-.parallax-media {
-  position: absolute;
-  top: -30%;
-  left: 0;
-  width: 100%;
-  height: 150%;
-  background-image: url('/images/other_images/reception.jpg');
-  background-size: cover;
-  background-position: bottom;
-  will-change: transform;
+.service-card:hover .icon-wrapper {
+  background: var(--green-color);
 }
 
-/* Optional overlay */
-.overlay {
-  position: absolute;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.35);
+.icon {
+  font-size: 40px;
+  color: #5b8fc7;
 }
 
-@media (max-width: 430px) {
-    .parallax-media {
-      height: 100%
-    }
+.card-content h3 {
+  font-size: clamp(1.2rem, 2vw, 1.5rem);
+  color: #333;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
-  
 
-/*--------End------Parallax CSS-------------------------------------*/
-/*======================================================================================*/
+.card-content p {
+  font-size: clamp(0.9rem, 1.5vw, 1rem);
+  color: #666;
+  line-height: 1.6;
+  font-style: italic;
+}
+
+.cta-section {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.cta-button {
+  background: var(--green-font);
+  color: white;
+  border: none;
+  padding: 15px 40px;
+  font-size: clamp(1rem, 2vw, 1.2rem);
+  font-weight: 600;
+  border-radius: 50px;
+  cursor: pointer;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.cta-button:hover {
+  background: var(--green-font);
+  color: white;
+  transform: scale(1.05);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+.cta-button:active {
+  transform: scale(0.98);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  body {
+    padding: 15px;
+  }
+
+  .header {
+    margin-bottom: 30px;
+  }
+
+  .services-grid {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .card-image {
+    height: 200px;
+  }
+
+  .card-content {
+    padding: 25px 15px;
+  }
+
+  .icon-wrapper {
+    width: 70px;
+    height: 70px;
+  }
+
+  .icon {
+    font-size: 35px;
+  }
+
+  .cta-button {
+    padding: 12px 30px;
+    width: 100%;
+    max-width: 300px;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1025px) {
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+
+
+
+/*-------------END--------------------Machine Card CSS-----------------------------------*/
+
 /*--------Start------Testimonial CSS-------------------------------------*/
 
 .testimonial-main {
