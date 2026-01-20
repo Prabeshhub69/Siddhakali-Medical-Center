@@ -1655,9 +1655,7 @@ body {
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
-  body {
-    padding: 15px;
-  }
+
 
   .header {
     margin-bottom: 30px;
