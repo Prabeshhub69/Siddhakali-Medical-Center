@@ -1553,7 +1553,7 @@ body {
   /* background: white; */
   border-radius: 12px;
   overflow: hidden;
-  /* box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2); */
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   cursor: pointer;
 }
@@ -1655,7 +1655,6 @@ body {
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
-
 
   .header {
     margin-bottom: 30px;
