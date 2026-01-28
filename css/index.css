@@ -276,7 +276,7 @@ body {
     }
 
     .contact a {
-        background-color: white;
+        /* background-color: transparent; */
         color: black;
         display: block;
         text-align: center;
