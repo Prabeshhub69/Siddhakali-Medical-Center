@@ -270,15 +270,15 @@ body {
     }
 
     .contact.active {
-        right: 0;
-        /* top:600px; */
+        left: 0;
+        top:85px;
     }
 
     .contact a {
         display: block;
         text-align: center;
         width: 100%;
-        padding: 12px 20px;
+        padding: 8px 16px;
         font-size: 1.15rem;
         border-radius: 8px;
     }
@@ -364,7 +364,7 @@ body {
     }
 
     .contact {
-        width: 100%;
+        width: 60%;
         padding: 15px;
     }
 }
