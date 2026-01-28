@@ -271,7 +271,7 @@ body {
 
     .contact.active {
         background-color: transparent;
-        left: 100px;
+        left: 80px;
         top:0px;
     }
 
