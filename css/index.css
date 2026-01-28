@@ -270,8 +270,9 @@ body {
     }
 
     .contact.active {
-        left: 0;
-        top:85px;
+        background-color: transparent;
+        left: 100px;
+        top:0px;
     }
 
     .contact a {
@@ -365,7 +366,7 @@ body {
 
     .contact {
         width: 60%;
-        padding: 15px;
+        padding: 1px;
     }
 }
 
