@@ -432,7 +432,6 @@ html {
 .third-component {
   width: 100%;
   padding: 0;
-  background: var(--bg);
 }
 
 .experienced {
@@ -448,7 +447,7 @@ html {
   font-weight: 900;
   color: var(--green-pale);
   line-height: 1;
-  top: -0.45em;
+  top: -0.55em;
   right: -0.05em;
   pointer-events: none;
   user-select: none;
@@ -464,9 +463,9 @@ html {
 
 .big-heading {
   font-family: "Ubuntu", sans-serif;
-  font-size: clamp(3rem, 6.5vw, 3.5rem);
+  font-size: clamp(3rem, 6.5vw, 3em);
   font-weight: 900;
-  color: var(--green);
+  /* color: var(--green); */
   line-height: 0.95;
   letter-spacing: -0.03em;
   /* text-transform: uppercase; */
@@ -475,8 +474,8 @@ html {
 }
 
 .big-heading .alt {
-  color: var(--white);
-  -webkit-text-stroke: 2px var(--green);
+  color: white;
+  -webkit-text-stroke: 2px black;
 }
 
 /* ── Body ── */
@@ -501,16 +500,6 @@ html {
   background-size: cover;
   background-position: center;
   display: block;
-}
-
-.img-accent-sq {
-  position: absolute;
-  bottom: -16px;
-  right: -16px;
-  width: 80px;
-  height: 80px;
-  background: var(--green-bright);
-  z-index: -1;
 }
 
 .img-stat {
@@ -864,7 +853,7 @@ html {
 .row {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 90px;
+  gap: 0px;
   align-items: center;
 }
 
