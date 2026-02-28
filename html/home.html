@@ -33,14 +33,12 @@
     <div class="row align-items-center">
 
       <!-- Left Content -->
-      <div class="col-lg-6 mb-5 mb-lg-0">
-        <div class="content-wrapper ">
-          <div class="section-tag">
-            About us Our Medical Center
-          </div>
+      <div class="left-about col-lg-6 mb-5 mb-lg-0">
+        <div class="content-wrapper">
+          <div class="section-tag">About us Our Medical Center</div>
 
           <h2 class="section-title">
-            Experience Excellence in<br>Medical Examination
+            Experience <em>Excellence</em> in<br>Medical Examination
           </h2>
 
           <p class="section-description">
@@ -54,32 +52,91 @@
 
           <div class="features-grid">
             <ul class="features-list">
-              <li><span class="tick">✔</span> Fast & Accurate Test Results </li>
+              <li><span class="tick">✔</span> Fast &amp; Accurate Test Results</li>
               <li><span class="tick">✔</span> Prime Location</li>
               <li><span class="tick">✔</span> Advanced Equipment</li>
             </ul>
-
             <ul class="features-list">
               <li><span class="tick">✔</span> Visa Medical Services</li>
-              <li><span class="tick">✔</span> Experienced Doctors & Specialists</li>
+              <li><span class="tick">✔</span> Experienced Doctors &amp; Specialists</li>
               <li><span class="tick">✔</span> Patient-Centric Care</li>
             </ul>
           </div>
+
           <a href="#about">
             <button class="btn-discover">Discover more</button>
           </a>
         </div>
       </div>
 
-      <!-- Right Images -->
-      <div class="col-lg-6">
+      <!-- Right: Carousel -->
+      <div class="right-about col-lg-6">
         <div class="images-container">
-          <div class="image-card image-large">
+
+          <!-- Main slide -->
+          <div class="main-slide-wrapper">
+            <div class="carousel-track" id="track">
+              <div class="image-card image-large">
+                <div class="slide-label">
+                  <div class="slide-label-text">
+                    <strong>Expert Medical Team</strong>
+                    <span>Certified doctors &amp; specialists</span>
+                  </div>
+                  <div class="slide-nav">
+                    <button class="slide-nav-btn" id="prev"><i class="fa-solid fa-arrow-left"></i></button>
+                    <button class="slide-nav-btn" id="next"><i class="fa-solid fa-arrow-right"></i></button>
+                  </div>
+                </div>
+              </div>
+              <div class="image-card image-top">
+                <div class="slide-label">
+                  <div class="slide-label-text">
+                    <strong>State-of-the-Art Facility</strong>
+                    <span>Modern medical environment</span>
+                  </div>
+                  <div class="slide-nav">
+                    <button class="slide-nav-btn" id="prev2"><i class="fa-solid fa-arrow-left"></i></button>
+                    <button class="slide-nav-btn" id="next2"><i class="fa-solid fa-arrow-right"></i></button>
+                  </div>
+                </div>
+              </div>
+              <div class="image-card image-bottom">
+                <div class="slide-label">
+                  <div class="slide-label-text">
+                    <strong>Comprehensive Services</strong>
+                    <span>Visa medicals &amp; health checks</span>
+                  </div>
+                  <div class="slide-nav">
+                    <button class="slide-nav-btn" id="prev3"><i class="fa-solid fa-arrow-left"></i></button>
+                    <button class="slide-nav-btn" id="next3"><i class="fa-solid fa-arrow-right"></i></button>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
-          <div class="image-card image-top">
+
+          <!-- Counter row -->
+          <div class="counter-row">
+            <span class="counter-text">GALLERY</span>
+            <div class="counter-bar-wrap">
+              <div class="counter-bar-fill" id="bar"></div>
+            </div>
+            <span class="counter-label" id="counter">01 / 03</span>
           </div>
-          <div class="image-card image-bottom">
+
+          <!-- Thumbnail strip -->
+          <div class="thumbnail-strip" id="thumbStrip">
+            <div class="thumb active">
+              <div class="thumb-num">01</div>
+            </div>
+            <div class="thumb">
+              <div class="thumb-num">02</div>
+            </div>
+            <div class="thumb">
+              <div class="thumb-num">03</div>
+            </div>
           </div>
+
         </div>
       </div>
 
