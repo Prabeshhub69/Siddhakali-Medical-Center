@@ -5,9 +5,9 @@
 <head>
     <meta charset="utf-8" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-    <title>Atelier - Testimonials</title>
+    <title>Our Services | The Clinical Atelier</title>
     <link
-        href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700&amp;family=Inter:wght@300;400;500;600&amp;display=swap"
+        href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&amp;family=Inter:wght@300;400;500;600&amp;display=swap"
         rel="stylesheet" />
     <link
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
@@ -16,13 +16,13 @@
         :root {
             --primary: #006b59;
             --primary-container: #49a38e;
+            --on-primary: #ffffff;
             --surface: #f8f9fa;
             --surface-container-low: #f3f4f5;
             --on-surface: #191c1d;
             --on-surface-variant: #3e4945;
-            --outline-variant: #bdc9c4;
-            --white: #ffffff;
-            --transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            --outline-variant: rgba(189, 201, 196, 0.3);
+            --background: #f8f9fa;
         }
 
         * {
@@ -32,427 +32,397 @@
         }
 
         body {
-            font-family: 'Inter', sans-serif;
-            background-color: var(--surface);
+            background-color: var(--background);
             color: var(--on-surface);
-            line-height: 1.5;
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
             -webkit-font-smoothing: antialiased;
         }
 
         h1,
         h2,
         h3,
-        h4,
-        .headline {
+        .font-headline {
             font-family: 'Manrope', sans-serif;
         }
 
-        .main-container {
-            min-height: 100vh;
+        .container {
+            max-width: 1440px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+            vertical-align: middle;
+            font-size: 1.25rem;
+        }
+
+        /* Editorial Grid System */
+        .editorial-grid {
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            gap: 2rem;
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 6rem 0 8rem 0;
+        }
+
+        .hero-content {
+            grid-column: span 6;
             display: flex;
             flex-direction: column;
-            align-items: center;
             justify-content: center;
-            padding: 4rem 1.5rem;
-            max-width: 1200px;
-            margin: 0 auto;
         }
 
-        /* Header Section */
-        .header-section {
-            text-align: center;
-            margin-bottom: 4rem;
-            max-width: 800px;
+        .hero-image-wrapper {
+            grid-column: span 6;
         }
 
-        .label {
-            font-size: 0.75rem;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 0.15em;
+        .hero-tag {
             color: var(--primary);
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 0.2em;
+            font-size: 0.75rem;
+            margin-bottom: 1.5rem;
             display: block;
-            margin-bottom: 1rem;
         }
 
-        .title {
-            font-size: 2.5rem;
+        .hero-title {
+            font-size: clamp(3rem, 5vw, 4.5rem);
             font-weight: 200;
+            line-height: 1.1;
             letter-spacing: -0.02em;
-            color: var(--on-surface);
+            margin-bottom: 2rem;
         }
 
-        .title-italic {
+        .hero-title span {
             font-style: italic;
-            color: var(--primary-container);
+            font-weight: 400;
         }
 
-        /* Carousel Styles */
-        .carousel-wrapper {
-            position: relative;
+        .hero-description {
+            color: var(--on-surface-variant);
+            font-size: 1.25rem;
+            max-width: 440px;
+            margin-bottom: 2.5rem;
+        }
+
+        .hero-image {
             width: 100%;
-            max-width: 1000px;
-            margin: 0 auto;
+            aspect-ratio: 4/5;
+            object-cover: cover;
+            border-radius: 0.75rem;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.15);
         }
 
-        .carousel-container {
+        /* Services Section */
+        .services-section {
             background-color: var(--surface-container-low);
-            border-radius: 1rem;
-            padding: 4rem 2rem;
-            position: relative;
-            overflow: hidden;
-            min-height: 500px;
+            padding: 8rem 0;
+        }
+
+        .section-header {
             display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            margin-bottom: 6rem;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            font-weight: 300;
+            letter-spacing: -0.03em;
+        }
+
+        .section-counter {
+            color: var(--on-surface-variant);
+            font-size: 0.875rem;
+            font-weight: 500;
+            border-bottom: 1px solid var(--outline-variant);
+            padding-bottom: 0.5rem;
+        }
+
+        .service-row {
+            margin-bottom: 10rem;
             align-items: center;
         }
 
-        @media (min-width: 768px) {
-            .carousel-container {
-                padding: 6rem 4rem;
-            }
+        .service-number {
+            color: var(--primary-container);
+            font-family: 'Manrope', sans-serif;
+            font-size: 2.5rem;
+            font-weight: 300;
+            display: block;
+            margin-bottom: 1.5rem;
         }
 
-        .carousel-track {
-            position: relative;
+        .service-name {
+            font-size: 2rem;
+            font-weight: 400;
+            margin-bottom: 1.5rem;
+        }
+
+        .service-text {
+            color: var(--on-surface-variant);
+            margin-bottom: 2rem;
+            max-width: 400px;
+        }
+
+        .service-link {
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: gap 0.3s ease;
+        }
+
+        .service-link:hover {
+            gap: 0.75rem;
+        }
+
+        .service-image-container {
+            border-radius: 0.75rem;
+            overflow: hidden;
+            aspect-ratio: 16/9;
+        }
+
+        .service-image-container img {
             width: 100%;
             height: 100%;
+            object-fit: cover;
+            filter: grayscale(100%);
+            transition: filter 0.7s ease;
         }
 
-        .testimonial-slide {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            opacity: 0;
-            visibility: hidden;
-            transition: var(--transition);
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            text-align: center;
-            transform: translateY(10px);
+        .service-image-container:hover img {
+            filter: grayscale(0%);
         }
 
-        .testimonial-slide.active {
-            opacity: 1;
-            visibility: visible;
-            transform: translateY(0);
-            position: relative;
-        }
-
-        .quote-icon {
-            font-family: 'Manrope';
-            font-size: 8rem;
-            font-weight: 200;
-            color: var(--primary);
-            opacity: 0.15;
-            position: absolute;
-            top: -3rem;
-            left: 0;
-            line-height: 1;
-            pointer-events: none;
-        }
-
-        .testimonial-text {
-            font-family: 'Manrope', sans-serif;
-            font-size: 1.5rem;
-            font-weight: 300;
-            line-height: 1.6;
-            color: var(--on-surface-variant);
-            max-width: 800px;
-            margin-bottom: 3rem;
-            position: relative;
-            z-index: 2;
-        }
-
-        @media (min-width: 768px) {
-            .testimonial-text {
-                font-size: 2rem;
-            }
-        }
-
-        .author-info {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-
-        .author-image-container {
-            width: 80px;
-            height: 80px;
-            border-radius: 50%;
-            overflow: hidden;
-            margin-bottom: 1.5rem;
+        .separator {
+            height: 1px;
             background-color: var(--outline-variant);
-            border: 4px solid var(--white);
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+            margin-bottom: 10rem;
         }
 
-        .author-image {
+        /* Grid Services */
+        .grid-services {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 6rem;
+        }
+
+        .grid-service-image {
+            aspect-ratio: 1/1;
+            border-radius: 0.75rem;
+            overflow: hidden;
+            margin-bottom: 2rem;
+        }
+
+        .grid-service-image img {
             width: 100%;
             height: 100%;
             object-fit: cover;
         }
 
-        .author-name {
-            font-size: 1.25rem;
-            font-weight: 600;
-            color: var(--on-surface);
-            margin-bottom: 0.25rem;
-        }
-
-        .author-role {
-            font-size: 0.75rem;
-            font-weight: 500;
-            text-transform: uppercase;
-            letter-spacing: 0.05em;
-            color: var(--primary);
-        }
-
-        /* Controls */
-        .nav-btn {
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            width: 3rem;
-            height: 3rem;
-            border-radius: 50%;
-            background: var(--white);
-            border: none;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            cursor: pointer;
-            box-shadow: 0 12px 32px rgba(0, 0, 0, 0.08);
-            z-index: 10;
-            transition: var(--transition);
-            color: var(--on-surface);
-        }
-
-        .nav-btn:hover {
-            color: var(--primary);
-            transform: translateY(-50%) scale(1.05);
-        }
-
-        .prev-btn {
-            left: -1.5rem;
-        }
-
-        .next-btn {
-            right: -1.5rem;
-        }
-
-        @media (max-width: 1100px) {
-            .prev-btn {
-                left: 1rem;
-            }
-
-            .next-btn {
-                right: 1rem;
-            }
-        }
-
-        .dots-container {
-            display: flex;
-            justify-content: center;
-            gap: 0.75rem;
-            margin-top: 3rem;
-        }
-
-        .dot {
-            width: 8px;
-            height: 8px;
-            border-radius: 50%;
-            background-color: var(--outline-variant);
-            border: none;
-            cursor: pointer;
-            transition: var(--transition);
-            padding: 0;
-        }
-
-        .dot.active {
-            background-color: var(--primary);
-            box-shadow: 0 0 0 4px rgba(0, 107, 89, 0.1);
-        }
-
-        /* Footer Grid */
-        .info-grid {
-            margin-top: 6rem;
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 3rem;
-            width: 100%;
-            max-width: 1000px;
-        }
-
-        @media (min-width: 768px) {
-            .info-grid {
-                grid-template-columns: repeat(3, 1fr);
-            }
-        }
-
-        .info-card {
+        /* CTA Section */
+        .cta-section {
+            padding: 8rem 2rem;
             text-align: center;
         }
 
-        @media (min-width: 768px) {
-            .info-card {
-                text-align: left;
-            }
+        .cta-title {
+            font-size: 2.5rem;
+            font-weight: 300;
+            margin-bottom: 2.5rem;
         }
 
-        .info-title {
-            font-size: 1.125rem;
-            font-weight: 500;
-            margin-bottom: 0.5rem;
-            color: var(--on-surface);
+        .cta-title span {
+            color: var(--primary);
+            font-style: italic;
         }
 
-        .info-desc {
+        .button-group {
+            display: flex;
+            gap: 1.5rem;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .btn {
+            padding: 1rem 2.5rem;
+            border-radius: 9999px;
+            font-weight: 600;
             font-size: 0.875rem;
-            color: var(--on-surface-variant);
-            line-height: 1.6;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, #006b59 0%, #49a38e 100%);
+            color: white;
+            border: none;
+            box-shadow: 0 10px 15px -3px rgba(0, 107, 89, 0.2);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 20px 25px -5px rgba(0, 107, 89, 0.3);
+        }
+
+        .btn-outline {
+            background: transparent;
+            color: var(--on-surface);
+            border: 1px solid var(--outline-variant);
+        }
+
+        .btn-outline:hover {
+            background-color: var(--surface-container-high);
+        }
+
+        .copyright {
+            color: #64748b;
+            font-size: 0.875rem;
+        }
+
+        @media (max-width: 768px) {
+            .editorial-grid {
+                display: block;
+            }
+
+            .hero-content {
+                margin-bottom: 4rem;
+            }
+
+            .service-row {
+                margin-bottom: 6rem;
+            }
+
+            .service-image-container {
+                margin-top: 2rem;
+            }
+
+            .grid-services {
+                grid-template-columns: 1fr;
+            }
+
+            .button-group {
+                flex-direction: column;
+            }
         }
     </style>
 </head>
 
 <body>
-    <main class="main-container">
-        <!-- Header -->
-        <header class="header-section">
-            <span class="label">Voices of Care</span>
-            <h1 class="title">Experiences defined by <span class="title-italic">excellence</span></h1>
-        </header>
-        <!-- Carousel Section -->
-        <div class="carousel-wrapper">
-            <button aria-label="Previous testimonial" class="nav-btn prev-btn">
-                <span class="material-symbols-outlined">arrow_back_ios_new</span>
-            </button>
-            <div class="carousel-container">
-                <div class="carousel-track">
-                    <!-- Slide 1 -->
-                    <div class="testimonial-slide active">
-                        <span class="quote-icon">"</span>
-                        <blockquote class="testimonial-text">
-                            The attention to detail and the serene atmosphere at the clinic redefined my expectations of
-                            healthcare. It truly feels like a bespoke experience designed around my personal well-being.
-                        </blockquote>
-                        <div class="author-info">
-                            <div class="author-image-container">
-                                <img alt="Elena Richardson" class="author-image"
-                                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuAb1s80XqLLoPd-d7KMkc3DW8wRqjjYe1Dv9VULPe_griWSZBPZZP82KF81uLi9uAjuWJhz52UwEksLouq5os9rLrnFGBdncqXeAlaSLotJJXulCWfjHxECFKMrUxbfZUz-gPtccYPy1IvPqKlPGFqNJ2BbIqCmpRBYHUa7F0cL8YG_eD7AzyO3SaMwL9jG9rVczsb93MUP-bjwMW8CSt1Zj50qXmLcgwAyboXCWrKtWEr6D2tSAi7_EWtEqBQYUsp1VWrheP5eR-tc" />
-                            </div>
-                            <h3 class="author-name">Elena Richardson</h3>
-                            <p class="author-role">Design Director, Global Health Init</p>
-                        </div>
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container editorial-grid">
+                <div class="hero-content">
+                    <span class="hero-tag">Diagnostic Excellence</span>
+                    <h1 class="hero-title">
+                        Precision Medicine <br />Through <span>Modern Care.</span>
+                    </h1>
+                    <p class="hero-description">
+                        Our services are designed to provide absolute clarity, merging advanced technology with clinical
+                        expertise.
+                    </p>
+                </div>
+                <div class="hero-image-wrapper">
+                    <img alt="Modern clinical laboratory" class="hero-image"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuDx4Ud-NBgRdcSKggX7Rf__vH2Qw8oh3mZ0s1-bR6EkEbxGl2I74AWOcqaGtySwU4007K76TPknR0IQF16DvukWSRq0CS-6b_dIRa0BgTMfiPRnD6MS5epqhpuZ8vrVnsrVpQHDAB9nNmNrcppIPdZfkQ1z0ThkLB8oyJkcXL_xj2el8f0luk9-ZeSMDMaCnr-3oJpL8wNz1AMAZZ1uEmKtqkj5YvNUgESg7YstwXZYwVm5dUGJwhUJ7UvEPzU4-8KhoWvJCTfDBA84" />
+                </div>
+            </div>
+        </section>
+        <!-- Services Section -->
+        <section class="services-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Our Services</h2>
+                    <p class="section-counter">01 — 04 Core Diagnostics</p>
+                </div>
+                <!-- Service 01 -->
+                <div class="editorial-grid service-row">
+                    <div style="grid-column: span 5;">
+                        <span class="service-number">01</span>
+                        <h3 class="service-name">Ultra Sonography (USG)</h3>
+                        <p class="service-text">
+                            High-resolution imaging providing non-invasive insights into your internal health. Our
+                            state-of-the-art ultrasound technology ensures accurate visualization for precise clinical
+                            assessments.
+                        </p>
+                        <a class="service-link" href="#">
+                            <span>Learn about imaging precision</span>
+                            <span class="material-symbols-outlined">arrow_forward</span>
+                        </a>
                     </div>
-                    <!-- Slide 2 -->
-                    <div class="testimonial-slide">
-                        <span class="quote-icon">"</span>
-                        <blockquote class="testimonial-text">
-                            An unprecedented level of professionalism. The clinical staff demonstrated not just
-                            expertise, but a genuine commitment to my recovery journey that I haven't found elsewhere.
-                        </blockquote>
-                        <div class="author-info">
-                            <div class="author-image-container">
-                                <img alt="Marcus Chen" class="author-image"
-                                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuCbJW_6KnqcHSUx-vG4EhbUD-ATI9knZryAVxP7kQ1bDVMUHCNL86K73xNzsJdPjZYl6bw2kUuPxfcW8uaDAbaGupXbmxkqdDaGIhxEaX_OvzJRv5f9S02eRh3dzRGkvPSwLOxeOlColJ4WLu1ACaLbAfavigWIWP-C5ZXunYfTN4TQAb0cW66yaDmcyw8fiAAzL9R5rLF2D6kvCllJ4wm_2HA_dpZ_pnv_gj77-oo_jKwuwEghk894bPWQhBTSwBpOXUONt_yunTYn" />
-                            </div>
-                            <h3 class="author-name">Marcus Chen</h3>
-                            <p class="author-role">Medical Researcher</p>
-                        </div>
-                    </div>
-                    <!-- Slide 3 -->
-                    <div class="testimonial-slide">
-                        <span class="quote-icon">"</span>
-                        <blockquote class="testimonial-text">
-                            Atelier has mastered the art of patient care. From the moment you walk in, the environment
-                            radiates calm, and the results of my treatment have been life-changing.
-                        </blockquote>
-                        <div class="author-info">
-                            <div class="author-image-container">
-                                <img alt="Sarah Jenkins" class="author-image"
-                                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuB2hUO2AuFetqKvMrXw5PlfELAL_md_A-M8TINPAM655kWU-ys1VVCd8OX7zhMFse_12XWXo-_W1jpOJhxoMZ59a-qEZ9K6v2WnGYWWTyo-mBqcUZOpNiMjhH29TENcnN77iEdFIAXoWXQnQuJiwMIkHeTwVaoGB1ErVaba0B4DtWVt1CEpB8SUaMsg1FU2gnTqZgZvzALUjLedqgZjpO3tU6A_F4QI8P-eVIKzhcQwdKlLLNX2SiPg-bOF1_xLOXj_mluIthYxZ3-9" />
-                            </div>
-                            <h3 class="author-name">Sarah Jenkins</h3>
-                            <p class="author-role">Executive Producer</p>
+                    <div style="grid-column: 7 / span 6;">
+                        <div class="service-image-container">
+                            <img alt="Professional radiologist performing ultrasound"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuAS-PPZdIjR3jI8QJceLczi-VW4zYUcGtGMX97hKHd86yOa7IdEOXcGhfQZF8KGh6c1gd0WxxVxL_lbyPPCwSzdrb7nYgC3bRE6jKemKzWETQSJOzP_AT9libINsnKmnJNlzi0kJq3SPQKX42GiJ7kw1NeEoVudpGUgCWFJUb3-yc5Y_Wn_2LEPEop5kjfOzoE1v3-K0PNKJTb7WhBdfEkiJuFh7UsMtaeJXykgniE2SUqZMXDfO9gmZCQe-jHak6iK-xtRzWMNwsFw" />
                         </div>
                     </div>
                 </div>
-            </div>
-            <button aria-label="Next testimonial" class="nav-btn next-btn">
-                <span class="material-symbols-outlined">arrow_forward_ios</span>
-            </button>
-            <!-- Pagination -->
-            <div class="dots-container">
-                <button class="dot active" data-index="0"></button>
-                <button class="dot" data-index="1"></button>
-                <button class="dot" data-index="2"></button>
-            </div>
-        </div>
-        <!-- Editorial Details -->
-        <section class="info-grid">
-            <div class="info-card">
-                <h4 class="info-title">98% Satisfaction</h4>
-                <p class="info-desc">Based on our annual patient experience survey conducted across all atelier
-                    branches.</p>
-            </div>
-            <div class="info-card">
-                <h4 class="info-title">Clinical Precision</h4>
-                <p class="info-desc">Our testimonials reflect the technical expertise and empathetic approach of our
-                    team.</p>
-            </div>
-            <div class="info-card">
-                <h4 class="info-title">Verified Care</h4>
-                <p class="info-desc">Every testimonial is shared with permission from our long-term clinical partners.
-                </p>
+                <div class="separator"></div>
+                <!-- Service 02 -->
+                <div class="editorial-grid service-row">
+                    <div style="grid-column: span 7;">
+                        <div class="service-image-container">
+                            <img alt="Laboratory technician with samples"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuAl3JPQ2vTHRqZZ2WqNcWCqCHQZ_36JL1TiZ0B5Z18Slif3zxIcMJGQwpKfbOKEHh_u7rJYoPGaM2Atl2sYZQ2SRHn0h-IGwmXuC4cD5xFXGYYu1n4Q8O3tS0CHO-GmejnYAdsVk85R56iziy73fB64AML75I8kk8WyU-xwozvRXZiIumBpCqJrfcaBkUuxzE16QIlRlVk2x039BK7IkjJFuTMamcu_blATbxTNXxIKHuUjKRkuh75aZKTv5yMbnNOSz-O32hrMLr39" />
+                        </div>
+                    </div>
+                    <div style="grid-column: 9 / span 4;">
+                        <span class="service-number">02</span>
+                        <h3 class="service-name">Blood Grouping</h3>
+                        <p class="service-text">
+                            Fundamental hematological screening with absolute accuracy. Essential for emergency
+                            preparedness and health records, processed with our signature clinical rigor.
+                        </p>
+                        <a class="service-link" href="#">
+                            <span>Request hematology report</span>
+                            <span class="material-symbols-outlined">arrow_forward</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="separator"></div>
+                <!-- Grid Services 03 & 04 -->
+                <div class="grid-services">
+                    <div class="grid-service-card">
+                        <span class="service-number">03</span>
+                        <h3 class="service-name">Blood Sugar Test</h3>
+                        <div class="grid-service-image">
+                            <img alt="Scientific glassware detail"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuD2xodxMJhSGZ1vQyILbKma6vQTCZKhCdKpFWWewM15ZOzmILT5piafxnBylUVTEWjbq-A9q30r7OxXT1DnM4bf8yjcHItHJFZpTGwad-E6n0o4onXiZPH6FbPO70fKThOZV48Tmyuu5wRBK2U_k98QLWJFhdp9nQUsvure_kJceG6b97qnkf62JFRK7QBPSAYvXsbH5_2BANjQ8VV3lS4CCi_DtWHfe3SDY19Hu8lF4qjmw05jS3j5LJCLgWjdLm0pejsFGGOQbhRz" />
+                        </div>
+                        <p class="service-text">
+                            Comprehensive glycemic monitoring. We utilize advanced enzymatic sensors to provide a
+                            detailed view of your glucose levels and metabolic health over time.
+                        </p>
+                    </div>
+                    <div class="grid-service-card">
+                        <span class="service-number">04</span>
+                        <h3 class="service-name">Uric Acid</h3>
+                        <div class="grid-service-image">
+                            <img alt="Precision clinical instrument"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuAdKRd7k0qNX36qUbQKBRWgR5lqxk9Ez519AuCFyN_zo7SWY2Giiy7AYq9VUBm3RL6H1L3AUyesyYVAyXIZROlEV6Q9OTrIrw13NtklaqW4RxGBYjKHXggo-Epf9tb1raKsyynEDaBZQqB__v76_19Oc9-RG86NyyE5vxyCW6fYBUzZBTDfnhYpIb3tTJZIc7EHpcTL_2FqaMrR9Q-iiBNU5ykEG1tokjdT4WvZ0d3HFnKZ7Pxz84IRNW_ZPHFXG9_Ri1Vezs7Bi17K" />
+                        </div>
+                        <p class="service-text">
+                            Targeted biochemical analysis for joints and renal health. Our precise measurement
+                            techniques help in early detection and management of hyperuricemia.
+                        </p>
+                    </div>
+                </div>
             </div>
         </section>
     </main>
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const slides = document.querySelectorAll('.testimonial-slide');
-            const dots = document.querySelectorAll('.dot');
-            const prevBtn = document.querySelector('.prev-btn');
-            const nextBtn = document.querySelector('.next-btn');
-            let currentIndex = 0;
-
-            function updateCarousel(index) {
-                // Remove active classes
-                slides.forEach(slide => slide.classList.remove('active'));
-                dots.forEach(dot => dot.classList.remove('active'));
-
-                // Set new active
-                slides[index].classList.add('active');
-                dots[index].classList.add('active');
-                currentIndex = index;
-            }
-
-            function showNext() {
-                let nextIndex = (currentIndex + 1) % slides.length;
-                updateCarousel(nextIndex);
-            }
-
-            function showPrev() {
-                let prevIndex = (currentIndex - 1 + slides.length) % slides.length;
-                updateCarousel(prevIndex);
-            }
-
-            // Button Listeners
-            nextBtn.addEventListener('click', showNext);
-            prevBtn.addEventListener('click', showPrev);
-
-            // Dot Listeners
-            dots.forEach((dot, index) => {
-                dot.addEventListener('click', () => {
-                    updateCarousel(index);
-                });
-            });
-
-            // Auto-advance (optional, commented out for user control)
-            // setInterval(showNext, 6000);
-        });
-    </script>
 </body>
 
 </html>
